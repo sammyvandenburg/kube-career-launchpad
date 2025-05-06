@@ -1,47 +1,82 @@
 
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-kubecraft-lightgray to-white py-16 md:py-24">
+    <section className="bg-gradient-to-b from-kubecraft-lightgray via-white to-white py-24 md:py-28">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="flex-1 animate-fade-in">
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              The #1 DevOps Community for <span className="text-[#326CE5]">Getting In, Standing Out & Staying Ahead</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8">
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <motion.div 
+            className="flex-1"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.h1 
+              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              The #1 DevOps Community for <span className="text-kubecraft-blue">Getting In, Standing Out & Staying Ahead</span>
+            </motion.h1>
+            <motion.p 
+              className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               DevOps is in high-demand and high-paid, but landing a job alone can feel impossible.
-              When you&apos;re surrounded by people who&apos;ve already done it, everything changes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+              When you&apos;re surrounded by people who&apos;ve already done it, <span className="font-semibold text-kubecraft-gray">everything changes.</span>
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
               <Button 
                 size="lg" 
-                className="bg-[#326CE5] hover:bg-[#2251B9] text-white text-lg"
+                className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white text-lg px-8 py-6 rounded-xl flex items-center gap-2 group transition-all duration-300"
                 onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
               >
-                Join KubeCraft Now
+                <span>Join KubeCraft Now</span>
+                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg border-[#326CE5] text-[#326CE5] hover:bg-[#326CE5] hover:text-white"
+                className="text-lg border-2 border-kubecraft-blue text-kubecraft-blue hover:bg-kubecraft-blue hover:text-white px-8 py-6 rounded-xl"
                 onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                See Testimonials
+                <span>See Testimonials</span>
+                <ChevronDown className="ml-1 h-5 w-5" />
               </Button>
-            </div>
-          </div>
-          <div className="flex-1 mt-8 md:mt-0">
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            className="flex-1 mt-8 md:mt-0"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-full h-full rounded-xl bg-[#326CE5]/10"></div>
-              <img
-                src="/lovable-uploads/c5c7a9d5-1002-4c7a-b043-9ccd06a1d138.png"
-                alt="KubeCraft Cube Logo"
-                className="rounded-xl shadow-lg w-full object-contain bg-white p-8 h-[400px]"
-              />
+              <div className="absolute -z-10 -top-6 -left-6 w-full h-full rounded-2xl bg-kubecraft-blue/10 blur-sm"></div>
+              <motion.div
+                className="rounded-2xl shadow-2xl w-full overflow-hidden border-4 border-white"
+                whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+                transition={{ duration: 0.5 }}
+              >
+                <img
+                  src="/lovable-uploads/c5c7a9d5-1002-4c7a-b043-9ccd06a1d138.png"
+                  alt="KubeCraft Cube Logo"
+                  className="rounded-xl w-full object-contain bg-white p-8 h-[400px]"
+                />
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

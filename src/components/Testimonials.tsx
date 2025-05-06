@@ -1,5 +1,6 @@
 
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -24,38 +25,58 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="section-padding bg-kubecraft-lightgray">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            What Our Community Members Say
+    <section id="testimonials" className="section-padding bg-white">
+      <div className="container-custom max-w-6xl">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
+            What Our <span className="text-kubecraft-blue">Community Members</span> Say
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Join hundreds of successful engineers who transformed their careers with KubeCraft.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card flex flex-col h-full">
-              <div className="flex items-center gap-4 mb-4">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+            <motion.div 
+              key={index} 
+              className="testimonial-card flex flex-col h-full relative rounded-2xl"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <div className="absolute -top-4 -left-4 text-kubecraft-blue opacity-30">
+                <Quote size={42} strokeWidth={1.5} />
+              </div>
+              <div className="p-8 pt-10 pb-6 bg-white rounded-t-2xl border border-gray-100 shadow-md">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-kubecraft-blue text-kubecraft-blue" />
+                  ))}
+                </div>
+                <p className="text-gray-700 text-lg mb-6">{testimonial.content}</p>
+              </div>
+              <div className="mt-auto bg-gray-50 p-6 rounded-b-2xl border-x border-b border-gray-100">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name} 
+                    className="w-14 h-14 rounded-full object-cover border-2 border-kubecraft-blue/20"
+                  />
+                  <div>
+                    <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-kubecraft-blue text-kubecraft-blue" />
-                ))}
-              </div>
-              <p className="text-gray-700 flex-grow">{testimonial.content}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,15 +1,38 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="bg-white sticky top-0 z-50 border-b border-gray-200 shadow-sm">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
+    }`}>
       <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center">
+          <motion.div 
+            className="flex items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             <a href="/" className="text-2xl font-bold flex items-center">
               <img 
                 src="/lovable-uploads/a81cae79-d03e-4b1b-965b-fcc2c7ce5f6c.png" 
@@ -18,55 +41,114 @@ const Header = () => {
               />
               <span className="gradient-text">KubeCraft</span>
             </a>
-            <nav className="hidden md:block ml-8">
-              <ul className="flex space-x-8">
-                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">Home</a></li>
-                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">Features</a></li>
-                <li><a href="#testimonials" className="text-gray-700 hover:text-[#326CE5] transition-colors">Testimonials</a></li>
-                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">About</a></li>
+            <nav className="hidden md:block ml-12">
+              <ul className="flex space-x-10">
+                <li>
+                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Home</a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Features</a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Testimonials</a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">About</a>
+                </li>
               </ul>
             </nav>
-          </div>
+          </motion.div>
           
-          <div className="hidden md:block">
-            <Button className="btn-primary" onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}>
+          <motion.div 
+            className="hidden md:block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Button 
+              className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white px-6 py-2 rounded-lg"
+              onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
+            >
               Join Now
             </Button>
-          </div>
+          </motion.div>
           
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              <X className="h-6 w-6" />
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <Menu className="h-6 w-6" />
             )}
           </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 py-4">
-          <div className="container-custom">
-            <nav>
-              <ul className="space-y-4">
-                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Home</a></li>
-                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Features</a></li>
-                <li><a href="#testimonials" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Testimonials</a></li>
-                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">About</a></li>
-                <li className="pt-2">
-                  <Button className="btn-primary w-full" onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}>
-                    Join Now
-                  </Button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            className="md:hidden bg-white border-t border-gray-200 absolute w-full left-0"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="container-custom py-6">
+              <nav>
+                <ul className="space-y-5">
+                  <li>
+                    <a 
+                      href="#" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="#" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="#testimonials" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="#" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li className="pt-3">
+                    <Button 
+                      className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white w-full py-3 text-lg rounded-lg"
+                      onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
+                    >
+                      Join Now
+                    </Button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
