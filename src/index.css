@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 196 94% 48%;
+    --primary: 222 80% 55%; /* Updated to Kubernetes blue */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -64,7 +64,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white py-3 px-6 rounded-md font-medium transition-colors duration-300;
+    @apply bg-[#326CE5] hover:bg-[#2251B9] text-white py-3 px-6 rounded-md font-medium transition-colors duration-300;
   }
 
   .section-padding {
@@ -76,7 +76,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-kubecraft-blue to-kubecraft-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#326CE5] to-[#3E88F6] bg-clip-text text-transparent;
   }
   
   .feature-card {

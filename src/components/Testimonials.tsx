@@ -3,28 +3,28 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Michael T.",
-    role: "Former Teacher, Now DevOps Engineer",
-    content: "Before joining KubeCraft, I was struggling to get interviews. Within 2 months of applying the strategies I learned here, I landed a job paying $95K as my first DevOps role!",
+    name: "Ale R.",
+    role: "DevOps Engineer",
+    content: "I joined Mischa's and May's Course with zero knowledge of IT and now I'm a DevOps Engineer. I would like to thank Mischa and May for helping me change my life. KubeCraft and its community is amazing!",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg"
   },
   {
-    name: "Sarah J.",
-    role: "Career Switcher, Cloud Engineer",
-    content: "The hands-on Azure environment was a game-changer for me. I could actually show real projects during interviews instead of just talking about concepts.",
+    name: "Maninder B.",
+    role: "Cloud Engineer",
+    content: "I enrolled in KubeCraft after trying everything. Within 4 months I landed my first Azure Cloud Engineer role. The community and weekly calls were game changers - everyone is genuinely helpful and supportive.",
     avatar: "https://randomuser.me/api/portraits/women/63.jpg"
   },
   {
-    name: "David L.",
-    role: "Junior to Senior DevOps in 1 Year",
-    content: "The weekly coaching calls and community support helped me solve problems that would have taken days to figure out on my own. Accelerated my growth tremendously.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    name: "Shaliza A.",
+    role: "DevOps Engineer",
+    content: "The best investment I've made in my career. I landed my first cloud job within weeks of joining thanks to the amazing community, coaching, and hands-on experience in the Azure lab environment.",
+    avatar: "https://randomuser.me/api/portraits/women/32.jpg"
   }
 ];
 
 const Testimonials = () => {
   return (
-    <section className="section-padding bg-kubecraft-lightgray">
+    <section id="testimonials" className="section-padding bg-kubecraft-lightgray">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">

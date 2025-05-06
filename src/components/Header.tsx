@@ -10,21 +10,26 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold gradient-text mr-4">
-              KubeCraft
+            <a href="/" className="text-2xl font-bold flex items-center">
+              <img 
+                src="/lovable-uploads/a81cae79-d03e-4b1b-965b-fcc2c7ce5f6c.png" 
+                alt="KubeCraft Logo" 
+                className="h-10 mr-2" 
+              />
+              <span className="gradient-text">KubeCraft</span>
             </a>
-            <nav className="hidden md:block">
+            <nav className="hidden md:block ml-8">
               <ul className="flex space-x-8">
-                <li><a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors">Home</a></li>
-                <li><a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors">Features</a></li>
-                <li><a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors">Testimonials</a></li>
-                <li><a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors">About</a></li>
+                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">Home</a></li>
+                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">Features</a></li>
+                <li><a href="#testimonials" className="text-gray-700 hover:text-[#326CE5] transition-colors">Testimonials</a></li>
+                <li><a href="#" className="text-gray-700 hover:text-[#326CE5] transition-colors">About</a></li>
               </ul>
             </nav>
           </div>
           
           <div className="hidden md:block">
-            <Button className="btn-primary">
+            <Button className="btn-primary" onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}>
               Join Now
             </Button>
           </div>
@@ -48,12 +53,12 @@ const Header = () => {
           <div className="container-custom">
             <nav>
               <ul className="space-y-4">
-                <li><a href="#" className="block text-gray-700 hover:text-kubecraft-blue transition-colors">Home</a></li>
-                <li><a href="#" className="block text-gray-700 hover:text-kubecraft-blue transition-colors">Features</a></li>
-                <li><a href="#" className="block text-gray-700 hover:text-kubecraft-blue transition-colors">Testimonials</a></li>
-                <li><a href="#" className="block text-gray-700 hover:text-kubecraft-blue transition-colors">About</a></li>
+                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Home</a></li>
+                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Features</a></li>
+                <li><a href="#testimonials" className="block text-gray-700 hover:text-[#326CE5] transition-colors">Testimonials</a></li>
+                <li><a href="#" className="block text-gray-700 hover:text-[#326CE5] transition-colors">About</a></li>
                 <li className="pt-2">
-                  <Button className="btn-primary w-full">
+                  <Button className="btn-primary w-full" onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}>
                     Join Now
                   </Button>
                 </li>

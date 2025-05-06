@@ -63,10 +63,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// KubeCraft custom colors
+				// KubeCraft custom colors - Updated Kubernetes blue
 				kubecraft: {
-					blue: '#0EA5E9',
-					darkblue: '#0284C7',
+					blue: '#326CE5', // Kubernetes blue
+					darkblue: '#2251B9',
 					teal: '#14B8A6',
 					gray: '#1E293B',
 					lightgray: '#F1F5F9'
