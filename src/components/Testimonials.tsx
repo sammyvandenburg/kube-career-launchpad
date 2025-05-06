@@ -3,22 +3,22 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ale R.",
+    name: "Alex R.",
     role: "DevOps Engineer",
-    content: "I joined Mischa's and May's Course with zero knowledge of IT and now I'm a DevOps Engineer. I would like to thank Mischa and May for helping me change my life. KubeCraft and its community is amazing!",
+    content: "I joined KubeCraft with zero knowledge of IT and now I'm a DevOps Engineer. The community support and resources were instrumental in my career transition.",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg"
   },
   {
-    name: "Maninder B.",
+    name: "Sarah K.",
     role: "Cloud Engineer",
-    content: "I enrolled in KubeCraft after trying everything. Within 4 months I landed my first Azure Cloud Engineer role. The community and weekly calls were game changers - everyone is genuinely helpful and supportive.",
+    content: "Within 3 months of joining KubeCraft, I landed my first cloud role. The hands-on projects and weekly coaching calls made all the difference in my job search.",
     avatar: "https://randomuser.me/api/portraits/women/63.jpg"
   },
   {
-    name: "Shaliza A.",
-    role: "DevOps Engineer",
-    content: "The best investment I've made in my career. I landed my first cloud job within weeks of joining thanks to the amazing community, coaching, and hands-on experience in the Azure lab environment.",
-    avatar: "https://randomuser.me/api/portraits/women/32.jpg"
+    name: "Michael T.",
+    role: "DevOps Lead",
+    content: "Best investment I've made in my career. The Kubernetes workshops and Azure lab environments provided the practical experience employers were looking for.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   }
 ];
 
