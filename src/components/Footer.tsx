@@ -1,4 +1,6 @@
 
+import RefundPolicy from "./RefundPolicy";
+
 const Footer = () => {
   return (
     <footer className="bg-kubecraft-gray text-white py-12">
@@ -21,6 +23,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Join Now</a></li>
+              <li><RefundPolicy /></li>
             </ul>
           </div>
           
