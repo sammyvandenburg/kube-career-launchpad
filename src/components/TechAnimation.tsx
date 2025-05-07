@@ -128,8 +128,7 @@ const TechAnimation = () => {
                         <img
                           src={tech.imagePath}
                           alt={tech.name}
-                          className="max-h-full max-w-full object-contain"
-                          style={{ maxWidth: "48px", maxHeight: "48px" }}
+                          className="w-10 h-10 md:w-12 md:h-12 object-contain"
                         />
                       </div>
                       <span className="text-sm font-medium text-kubecraft-gray text-center">
