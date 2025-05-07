@@ -2,48 +2,66 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { 
+  Github, 
+  Binary, 
+  Container, 
+  Cloud, 
+  Server, 
+  Terminal, 
+  Code, 
+  GitBranch 
+} from "lucide-react";
 
-// Define the technologies with their icons and names
+// Define the technologies with their icons and colors
 const technologies = [
   { 
     name: "Kubernetes", 
-    imagePath: "/lovable-uploads/e04bfffc-070d-4e5a-b133-08aed599355b.png", 
-    color: "#326CE5" 
+    icon: Server, 
+    color: "#326CE5",
+    description: "Container orchestration"
   },
   { 
     name: "Azure", 
-    imagePath: "/lovable-uploads/24cab4ad-83b8-47da-8791-afa7f5c13621.png", 
-    color: "#0078D4" 
+    icon: Cloud, 
+    color: "#0078D4",
+    description: "Cloud platform"
   },
   { 
     name: "Linux", 
-    imagePath: "/lovable-uploads/1cb65884-972e-4aeb-ab3d-1feb7b4b8b7d.png", 
-    color: "#FCC624" 
+    icon: Terminal, 
+    color: "#FCC624",
+    description: "Operating system"
   },
   { 
     name: "Git", 
-    imagePath: "/lovable-uploads/c07a3625-ecc1-44f1-8437-278466bbcf46.png", 
-    color: "#F05032" 
+    icon: GitBranch, 
+    color: "#F05032",
+    description: "Version control"
   },
   { 
     name: "Arch Linux", 
-    imagePath: "/lovable-uploads/8c3f15e0-d1fa-4aa2-ab91-8cba4cdc4a1b.png", 
-    color: "#1793D1" 
+    icon: Terminal, 
+    color: "#1793D1",
+    description: "Linux distribution"
   },
   { 
     name: "Docker", 
-    imagePath: "/lovable-uploads/f76f6cb2-b537-42ca-adb5-c53c74e872e1.png", 
-    color: "#2496ED" 
+    icon: Container, 
+    color: "#2496ED",
+    description: "Containerization"
   },
   { 
     name: "Python", 
-    imagePath: "/lovable-uploads/725f40d1-e931-499a-b6ba-3e16dc9dca2a.png", 
-    color: "#3776AB" 
+    icon: Code, 
+    color: "#3776AB",
+    description: "Programming language"
   },
   { 
     name: "GitHub", 
-    imagePath: "/lovable-uploads/93c69ba2-f087-49dc-b3d8-318e753e5ac1.png", 
-    color: "#181717" 
+    icon: Github, 
+    color: "#181717",
+    description: "Code hosting"
   }
 ];
 
@@ -88,7 +106,7 @@ const TechAnimation = () => {
           </p>
         </motion.div>
 
-        {/* Technology grid */}
+        {/* Technology grid using Lucide icons */}
         <TooltipProvider>
           <motion.div 
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8"
@@ -107,13 +125,16 @@ const TechAnimation = () => {
               >
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300">
+                    <div 
+                      className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300"
+                      style={{ borderTop: `3px solid ${tech.color}` }}
+                    >
                       <div className="flex items-center justify-center h-16 mb-3">
-                        {/* Using plain HTML img tag with explicit width and height */}
-                        <img
-                          src={tech.imagePath}
-                          alt={tech.name}
-                          className="w-12 h-12 object-contain"
+                        {/* Using Lucide React Icon component with explicit sizing */}
+                        <tech.icon 
+                          size={48} 
+                          color={tech.color}
+                          strokeWidth={1.5}
                         />
                       </div>
                       <span className="text-sm font-medium text-kubecraft-gray text-center">
@@ -125,25 +146,13 @@ const TechAnimation = () => {
                     style={{ backgroundColor: tech.color, color: '#fff' }}
                     className="font-medium"
                   >
-                    Master {tech.name}
+                    {tech.description}
                   </TooltipContent>
                 </Tooltip>
               </motion.div>
             ))}
           </motion.div>
         </TooltipProvider>
-        
-        {/* For debugging purposes, let's add a direct image to verify path resolution */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 mb-2">Debug image check:</p>
-          <div className="flex justify-center">
-            <img 
-              src="/lovable-uploads/e04bfffc-070d-4e5a-b133-08aed599355b.png" 
-              alt="Kubernetes Debug" 
-              className="w-12 h-12" 
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
