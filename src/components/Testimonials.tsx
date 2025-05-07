@@ -54,12 +54,9 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-kubecraft-gray">
             What Our <span className="text-kubecraft-blue">Members Say</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Join hundreds of engineers transforming their careers with KubeCraft — and discover why it works.
-          </p>
         </motion.div>
 
         {/* Featured quotes */}
@@ -78,46 +75,48 @@ const Testimonials = () => {
           </div>
         </motion.div>
         
-        {/* Why it works section */}
+        {/* Enhanced "Why it works" section */}
         <motion.div 
-          className="bg-white rounded-xl shadow-md p-8 mb-16 border border-gray-100"
+          className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 mb-16 border border-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p className="text-xl text-center mb-6 text-gray-800">Our members don't just learn technical skills — they get:</p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-start gap-3">
-              <div className="mt-1.5 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+          <h3 className="text-2xl md:text-3xl text-center font-bold mb-6 text-kubecraft-gray">
+            Our members don't just learn technical skills — <span className="text-kubecraft-blue">they get:</span>
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-6 w-6 text-green-600" />
               </div>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-800 font-medium">
                 Real-world experience employers value
               </p>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="mt-1.5 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-6 w-6 text-green-600" />
               </div>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-800 font-medium">
                 A supportive network that opens doors
               </p>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="mt-1.5 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-6 w-6 text-green-600" />
               </div>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-800 font-medium">
                 Mentorship and coaching from experienced engineers
               </p>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="mt-1.5 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-6 w-6 text-green-600" />
               </div>
-              <p className="text-lg text-gray-700">
-                Practical, in-demand skills that <span style={{ color: orange }} className="font-semibold">actually</span> get you hired
+              <p className="text-xl text-gray-800 font-medium">
+                Practical, in-demand skills that <span style={{ color: orange }} className="font-bold">actually</span> get you hired
               </p>
             </div>
           </div>
