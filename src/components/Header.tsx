@@ -1,6 +1,7 @@
 
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const Header = () => {
@@ -9,120 +10,158 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const topFeatures = [
-    "True hands-on DevOps Masterclass (50+ hours)",
-    "Active community of industry experts",
-    "Weekly mentorship calls",
-    "Learn how to <span class='text-[#F98C20] font-semibold'>actually</span> get hired"
-  ];
+  const menuVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: { 
+      opacity: 1, 
+      height: 'auto',
+      transition: { 
+        duration: 0.3,
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    },
+    exit: { opacity: 0, height: 0, transition: { duration: 0.3 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 }
+  };
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white shadow-md py-3' : 'bg-white py-5'
+    }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <img
-                src="/lovable-uploads/8ba9d379-c66b-4414-86b4-8509520d0a49.png"
-                alt="KubeCraft Logo"
-                className="h-10 md:h-12 mr-3"
-              />
-              <span className="font-bold text-lg md:text-xl text-kubecraft-gray">
-                KubeCraft
-              </span>
+        <div className="flex justify-between items-center">
+          <motion.div 
+            className="flex items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <a href="/" className="text-2xl font-bold flex items-center">
+              <div className="h-10 w-10 mr-2 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
+                  alt="KubeCraft Logo" 
+                  className="logo-image h-full w-auto object-contain"
+                />
+              </div>
+              <span className="gradient-text">KubeCraft</span>
             </a>
-            
-            {/* Award badge - now with hover effect */}
-            <motion.div 
-              className="ml-4 hidden md:flex items-center px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-amber-700 text-sm"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <img 
-                src="/lovable-uploads/b454ae57-e940-4c56-bde1-aa4097bf1ed2.png" 
-                alt="Award" 
-                className="h-4 w-4 mr-1"
-              />
-              <span>Top 1% Skool Community Award</span>
-            </motion.div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="https://www.skool.com/kubecraft"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
+            <nav className="hidden md:block ml-12">
+              <ul className="flex space-x-10">
+                <li>
+                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Home</a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Testimonials</a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">About</a>
+                </li>
+              </ul>
+            </nav>
+          </motion.div>
+          
+          <motion.div 
+            className="hidden md:block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Button 
+              className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+              onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               Join Now
-            </a>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden focus:outline-none"
+            </Button>
+          </motion.div>
+          
+          <motion.button 
+            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            whileTap={{ scale: 0.95 }}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-kubecraft-gray" />
+              <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6 text-kubecraft-gray" />
+              <Menu className="h-6 w-6" />
             )}
-          </button>
+          </motion.button>
         </div>
-
-        {/* Mobile Navigation */}
+      </div>
+      
+      {/* Mobile Menu */}
+      <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
+          <motion.div 
+            className="md:hidden bg-white border-t border-gray-200 absolute w-full left-0 shadow-lg"
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
           >
-            <div className="flex flex-col space-y-3">
-              <a
-                href="https://www.skool.com/kubecraft"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-center mx-4"
-              >
-                Join Now
-              </a>
+            <div className="container-custom py-6">
+              <nav>
+                <ul className="space-y-5">
+                  <motion.li variants={itemVariants}>
+                    <a 
+                      href="#" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Home
+                    </a>
+                  </motion.li>
+                  <motion.li variants={itemVariants}>
+                    <a 
+                      href="#testimonials" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Testimonials
+                    </a>
+                  </motion.li>
+                  <motion.li variants={itemVariants}>
+                    <a 
+                      href="#" 
+                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      About
+                    </a>
+                  </motion.li>
+                  <motion.li variants={itemVariants} className="pt-3">
+                    <Button 
+                      className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white w-full py-3 text-lg rounded-lg"
+                      onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
+                    >
+                      Join Now
+                    </Button>
+                  </motion.li>
+                </ul>
+              </nav>
             </div>
           </motion.div>
         )}
-
-        {/* Top features */}
-        <div className="hidden md:block mt-16 pt-12 pb-3">
-          <div className="flex flex-wrap justify-center gap-5">
-            {topFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm border border-gray-100"
-              >
-                <div className="h-2 w-2 bg-kubecraft-blue rounded-full mr-2"></div>
-                <span 
-                  className="text-sm font-medium text-kubecraft-gray"
-                  dangerouslySetInnerHTML={{ __html: feature }}
-                ></span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </AnimatePresence>
     </header>
   );
 };
