@@ -16,7 +16,7 @@ const Footer = () => {
           >
             <h3 className="text-2xl font-bold mb-6 flex items-center">
               <img 
-                src="/lovable-uploads/a81cae79-d03e-4b1b-965b-fcc2c7ce5f6c.png" 
+                src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
                 alt="KubeCraft Logo" 
                 className="h-8 mr-2" 
               />
@@ -76,16 +76,16 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-gray-300">
-                <a href="mailto:support@kubecraft.com" className="hover:text-white transition-colors inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:transition-all hover:after:w-full">
-                  support@kubecraft.com
+                <a href="mailto:mischa@kubecraft.com" className="hover:text-white transition-colors inline-block after:content-[''] after:block after:w-0 after:h-0.5 after:bg-white after:transition-all hover:after:w-full">
+                  mischa@kubecraft.com
                 </a>
               </li>
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://www.youtube.com/@mischavandenburg" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <Youtube className="h-6 w-6 hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/mischavandenburg/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
                 <Linkedin className="h-6 w-6 hover:scale-110 transition-transform" />
               </a>
             </div>

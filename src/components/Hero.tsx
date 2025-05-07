@@ -17,22 +17,22 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white text-shadow"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            The #1 Awarded DevOps Community to Land Jobs, Stand Out & Stay Ahead
+            The <span className="text-amber-400">#1 Awarded</span> DevOps Community to Land Jobs, Stand Out & Stay Ahead
           </motion.h1>
           
           <motion.p 
-            className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl"
+            className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            DevOps is in high demand and highly paid, but landing a job on your own can feel impossible.
-            <br className="hidden md:block" /> When you're surrounded by people who've already done it, everything changes.
+            DevOps is in high demand and highly paid, but landing a job on your own can feel <span className="text-amber-300">impossible</span>.
+            <br className="hidden md:block" /> When you're surrounded by people who've already done it, <span className="text-amber-300">everything changes</span>.
           </motion.p>
 
           <motion.div 
@@ -56,7 +56,7 @@ const Hero = () => {
                 <div className="mt-1 bg-green-100 p-1.5 rounded-full">
                   <Check className="h-4 w-4 text-green-600" />
                 </div>
-                <p className="text-lg text-white/95">
+                <p className="text-lg text-white/95 font-medium">
                   {item}
                 </p>
               </motion.div>
@@ -80,7 +80,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg border-2 border-white text-white hover:bg-white/10 px-8 py-6 rounded-xl transition-all duration-300"
+              className="text-lg border-2 border-white text-black bg-white hover:bg-white/90 px-8 py-6 rounded-xl transition-all duration-300"
               onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <span>See Member Stories</span>
