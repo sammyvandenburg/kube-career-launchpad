@@ -24,11 +24,13 @@ const WhyJoinWithGuarantee = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.05, rotate: 2 }}
+          className="transform transition-all duration-300"
         >
           <img 
             src="/lovable-uploads/e4209bbb-8da9-4b0b-9867-691db2849c76.png" 
             alt="100% Satisfaction Guaranteed" 
-            className="w-48 h-48 object-contain transform transition-transform duration-300 hover:scale-110"
+            className="w-48 h-48 object-contain hover:drop-shadow-xl"
           />
         </motion.div>
 

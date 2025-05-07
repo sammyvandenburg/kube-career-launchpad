@@ -9,7 +9,8 @@ const MischaStory = () => {
     "Feeling lost in endless courses and tutorials?",
     "Frustrated with advice that doesn't lead to real jobs?",
     "Worrying your background isn't \"technical enough\"?",
-    "Unsure how to stand out to employers or recruiters?"
+    "Unsure how to stand out to employers or recruiters?",
+    "Tired of surface-level knowledge and craving hands-on skills employers actually want?"
   ];
 
   return (
