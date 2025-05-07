@@ -99,7 +99,7 @@ const TechAnimation = () => {
             <img 
               src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
               alt="KubeCraft Logo" 
-              className="logo-image h-10 w-10 md:h-12 md:w-12 object-contain"
+              className="h-10 w-10 md:h-12 md:w-12 object-contain"
             />
           </div>
         </motion.div>
@@ -113,7 +113,7 @@ const TechAnimation = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            {technologies.map((tech, index) => (
+            {technologies.map((tech) => (
               <motion.div
                 key={tech.name}
                 variants={itemVariants}
@@ -128,7 +128,9 @@ const TechAnimation = () => {
                         <img
                           src={tech.imagePath}
                           alt={tech.name}
-                          className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                          width={48}
+                          height={48}
+                          className="object-contain"
                         />
                       </div>
                       <span className="text-sm font-medium text-kubecraft-gray text-center">
