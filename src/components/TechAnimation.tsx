@@ -88,23 +88,7 @@ const TechAnimation = () => {
           </p>
         </motion.div>
 
-        {/* Center logo */}
-        <motion.div 
-          className="relative flex justify-center mb-10"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="bg-white h-16 w-16 md:h-20 md:w-20 rounded-full flex items-center justify-center shadow-lg">
-            <img 
-              src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
-              alt="KubeCraft Logo" 
-              className="h-10 w-10 md:h-12 md:w-12 object-contain"
-            />
-          </div>
-        </motion.div>
-
-        {/* Technology grid */}
+        {/* Technology grid - without the central logo */}
         <TooltipProvider>
           <motion.div 
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8"
@@ -128,9 +112,9 @@ const TechAnimation = () => {
                         <img
                           src={tech.imagePath}
                           alt={tech.name}
-                          width={48}
-                          height={48}
-                          className="object-contain"
+                          width="48"
+                          height="48"
+                          style={{ maxHeight: "48px", maxWidth: "48px" }}
                         />
                       </div>
                       <span className="text-sm font-medium text-kubecraft-gray text-center">
