@@ -1,6 +1,5 @@
 
-import { Check, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhyJoinWithGuarantee = () => {
@@ -27,9 +26,9 @@ const WhyJoinWithGuarantee = () => {
           transition={{ duration: 0.6 }}
         >
           <img 
-            src="/lovable-uploads/04f527a1-a013-465f-b634-293acff02de1.png" 
+            src="/lovable-uploads/e4209bbb-8da9-4b0b-9867-691db2849c76.png" 
             alt="100% Satisfaction Guaranteed" 
-            className="w-48 h-48 object-contain"
+            className="w-48 h-48 object-contain transform transition-transform duration-300 hover:scale-110"
           />
         </motion.div>
 
@@ -64,23 +63,6 @@ const WhyJoinWithGuarantee = () => {
           <p className="text-lg mb-10">
             Come ready to engage. Join the live sessions, tap into mentorship, and apply the hands-on training. That's where the transformation happens.
           </p>
-        </motion.div>
-
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <Button 
-            size="lg" 
-            className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white text-xl px-10 py-7 rounded-xl shadow-lg group"
-            onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
-          >
-            <span>Join KubeCraft Today</span>
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
         </motion.div>
       </div>
     </section>

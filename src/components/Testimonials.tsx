@@ -1,4 +1,3 @@
-
 import { Star, Quote, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -55,7 +54,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-kubecraft-gray">
-            What Our <span className="text-kubecraft-blue">Members Say</span>
+            Real Words From Real Members <span className="text-kubecraft-blue">(We Don't Even Have to Ask)</span>
           </h2>
         </motion.div>
 
