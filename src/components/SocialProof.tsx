@@ -30,7 +30,7 @@ const SocialProof = () => {
             whileHover={{ scale: 1.05 }}
           >
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/800px-Google_%22G%22_Logo.svg.png" 
+              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
               alt="Google" 
               className="h-12 md:h-16 object-contain" 
             />

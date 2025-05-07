@@ -1,90 +1,115 @@
 
-import { Award, Check, ArrowRight, UserCheck, Users, Medal } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const MischaStory = () => {
+  const painPoints = [
+    "Struggling to break into DevOps without experience?",
+    "Feeling lost in endless courses and tutorials?",
+    "Frustrated with advice that doesn't lead to real jobs?",
+    "Worrying your background isn't \"technical enough\"?",
+    "Unsure how to stand out to employers or recruiters?"
+  ];
+
   return (
     <section className="section-padding py-24 bg-gradient-to-b from-white to-kubecraft-lightgray/30">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row items-center gap-16">
+        <div className="text-center mb-12">
+          <motion.h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-kubecraft-gray"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Feeling Stuck in Your <span className="text-kubecraft-blue">DevOps Journey?</span>
+          </motion.h2>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-stretch gap-12">
+          {/* Left side - Pain points */}
           <motion.div 
-            className="flex-1 order-2 md:order-1"
+            className="flex-1 space-y-5"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative">
-              <div className="absolute -z-10 -top-4 -right-4 w-full h-full rounded-2xl bg-kubecraft-teal/10 blur-sm"></div>
+            {painPoints.map((point, index) => (
               <motion.div 
-                className="rounded-2xl overflow-hidden border-4 border-white shadow-xl"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.5 }}
+                key={index}
+                className="flex items-start gap-4" 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
               >
-                <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop"
-                  alt="Mischa's Success Story"
-                  className="w-full object-cover h-[400px]"
-                />
+                <div className="mt-1 bg-kubecraft-blue/10 p-2 rounded-full flex-shrink-0">
+                  <Check className="h-5 w-5 text-kubecraft-blue" />
+                </div>
+                <p className="text-lg text-gray-700">{point}</p>
               </motion.div>
-            </div>
+            ))}
           </motion.div>
+          
+          {/* Right side - Solution */}
           <motion.div 
-            className="flex-1 order-1 md:order-2"
+            className="flex-1"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="bg-kubecraft-blue/10 p-2 rounded-lg">
-                <Medal className="text-kubecraft-blue h-6 w-6" />
+            <div className="relative">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-kubecraft-blue/10 to-kubecraft-teal/10 -z-10 blur-md"></div>
+              <div className="bg-white/80 backdrop-blur-sm p-8 md:p-10 rounded-3xl shadow-xl border border-white">
+                <p className="text-xl mb-6 text-kubecraft-gray font-medium">
+                  Join KubeCraft and get hands-on guidance from someone who's been in your shoes.
+                </p>
+                
+                <p className="text-lg mb-8 text-gray-700">
+                  I went from a non-tech background to a 6-figure DevOps career in just 6 months — and now I help 600+ members do the same.
+                </p>
+                
+                <p className="text-lg font-semibold mb-4 text-kubecraft-gray">
+                  Inside, you'll get:
+                </p>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 bg-green-100 p-1.5 rounded-full">
+                      <Check className="h-4 w-4 text-green-600" />
+                    </div>
+                    <p className="text-gray-700">A proven, step-by-step roadmap</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 bg-green-100 p-1.5 rounded-full">
+                      <Check className="h-4 w-4 text-green-600" />
+                    </div>
+                    <p className="text-gray-700">Practical experience through internships</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1 bg-green-100 p-1.5 rounded-full">
+                      <Check className="h-4 w-4 text-green-600" />
+                    </div>
+                    <p className="text-gray-700">A supportive network that helps you win</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg font-bold mb-8 text-kubecraft-gray italic">
+                  I learned the hard way so you don't have to.
+                </p>
+                
+                <Button 
+                  className="bg-amber-500 hover:bg-amber-600 text-white text-lg px-8 py-6 rounded-xl shadow-md group hover:shadow-lg hover:scale-105 transition-all duration-300 w-full md:w-auto"
+                  onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
+                >
+                  <span>Join the KubeCraft Community</span>
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
               </div>
-              <p className="text-kubecraft-blue font-semibold uppercase tracking-wider text-sm">Mischa's Story</p>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-kubecraft-gray">
-              From Nurse to DevOps Engineer in <span className="text-kubecraft-blue">6 Months</span>
-            </h2>
-            <div className="space-y-6 mb-10">
-              <p className="text-xl text-gray-700">
-                I went from nursing to DevOps in just 6 months, doubled my salary, and grew a 46K YouTube channel. 
-                Now I help others do the same.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                    <Users className="h-5 w-5 text-green-600" />
-                  </div>
-                  <p className="text-lg text-gray-700">
-                    Join 600+ engineers
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                    <Check className="h-5 w-5 text-green-600" />
-                  </div>
-                  <p className="text-lg text-gray-700">
-                    Follow a proven system
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                    <UserCheck className="h-5 w-5 text-green-600" />
-                  </div>
-                  <p className="text-lg text-gray-700">
-                    Get personal coaching + job-ready skills
-                  </p>
-                </div>
-              </div>
-            </div>
-            <Button 
-              className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white text-lg px-8 py-6 rounded-xl shadow-md group hover:shadow-lg hover:scale-105 transition-all duration-300"
-              onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
-            >
-              Follow My Path
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
           </motion.div>
         </div>
       </div>

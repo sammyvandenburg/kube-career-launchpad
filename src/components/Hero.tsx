@@ -124,8 +124,8 @@ const Hero = () => {
                 transition={{ duration: 0.5 }}
               >
                 <img
-                  src="https://kubernetes.io/images/kubernetes-horizontal-color.png"
-                  alt="Kubernetes Logo"
+                  src="/lovable-uploads/8ba9d379-c66b-4414-86b4-8509520d0a49.png"
+                  alt="KubeCraft Logo"
                   className="w-full max-w-[320px] object-contain"
                 />
               </motion.div>

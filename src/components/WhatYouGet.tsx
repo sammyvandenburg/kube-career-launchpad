@@ -7,39 +7,65 @@ const featuresList = [
     title: "DevOps Masterclass",
     description: "50+ hours of practical, hands-on training",
     icon: BookOpen,
-    highlight: true
+    color: "blue"
   },
   {
     title: "Enterprise Azure Lab",
     description: "Work in real production-grade environments",
     icon: ShieldCheck,
-    highlight: false
+    color: "purple"
   },
   {
     title: "Internship Program",
     description: "Add real-world experience to your CV + LinkedIn",
     icon: Award,
-    highlight: true
+    color: "amber"
   },
   {
     title: "Weekly Coaching Calls",
     description: "Get direct help from experts",
     icon: Calendar,
-    highlight: false
+    color: "green"
   },
   {
     title: "Expert Community",
     description: "600+ engineers from top companies",
     icon: Users,
-    highlight: true
+    color: "pink"
   },
   {
     title: "CV & LinkedIn Accelerator",
     description: "Stand out and attract top employers",
     icon: MessageSquare,
-    highlight: false
+    color: "teal"
   }
 ];
+
+const getGradient = (color: string) => {
+  const gradients = {
+    blue: "from-blue-500/10 to-blue-600/5",
+    purple: "from-purple-500/10 to-purple-600/5",
+    amber: "from-amber-500/10 to-amber-600/5",
+    green: "from-green-500/10 to-green-600/5",
+    pink: "from-pink-500/10 to-pink-600/5",
+    teal: "from-teal-500/10 to-teal-600/5"
+  };
+  
+  return gradients[color as keyof typeof gradients] || gradients.blue;
+};
+
+const getIconColor = (color: string) => {
+  const colors = {
+    blue: "text-blue-500",
+    purple: "text-purple-500",
+    amber: "text-amber-500",
+    green: "text-green-500",
+    pink: "text-pink-500",
+    teal: "text-teal-500"
+  };
+  
+  return colors[color as keyof typeof colors] || colors.blue;
+};
 
 const WhatYouGet = () => {
   return (
@@ -64,24 +90,35 @@ const WhatYouGet = () => {
           {featuresList.map((feature, index) => (
             <motion.div 
               key={index} 
-              className={`feature-card bg-white rounded-xl p-8 h-full flex flex-col hover:shadow-xl transition-all duration-300 ${
-                feature.highlight ? 'shadow-lg border-l-4 border-l-kubecraft-blue' : 'shadow-md border border-gray-100'
-              }`}
+              className="group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-kubecraft-blue/10 p-3 rounded-lg mt-1">
-                  <feature.icon className="h-6 w-6 text-kubecraft-blue" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-3 text-kubecraft-gray">{feature.title}</h3>
+              <motion.div 
+                className="bg-white rounded-xl p-8 h-full border border-gray-100 overflow-hidden relative transition-all duration-500 hover:shadow-xl"
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.3 }
+                }}
+              >
+                {/* Background gradient that animates on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${getGradient(feature.color)} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`p-4 rounded-full inline-flex items-center justify-center bg-white shadow-md mb-6 ${getIconColor(feature.color)}`}>
+                    <feature.icon className="h-8 w-8" />
+                  </div>
+                  
+                  <h3 className="font-bold text-2xl mb-3 text-kubecraft-gray group-hover:text-kubecraft-blue transition-colors duration-300">{feature.title}</h3>
                   <p className="text-gray-700">{feature.description}</p>
                 </div>
-              </div>
+                
+                {/* Decorative corner */}
+                <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-white/0 to-gray-100/30 rounded-tl-[40px] group-hover:to-gray-100/50 transition-colors duration-500"></div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
