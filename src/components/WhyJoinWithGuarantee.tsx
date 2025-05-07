@@ -19,12 +19,13 @@ const WhyJoinWithGuarantee = () => {
         </motion.div>
 
         <motion.div
-          className="flex justify-center mb-16 transform transition-all duration-300"
+          className="flex justify-center mb-16"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           whileHover={{ scale: 1.05, rotate: 2 }}
+          className="transform transition-all duration-300"
         >
           <img 
             src="/lovable-uploads/e4209bbb-8da9-4b0b-9867-691db2849c76.png" 
