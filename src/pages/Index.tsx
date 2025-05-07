@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import MischaStory from "../components/MischaStory";
 import WhatYouGet from "../components/WhatYouGet";
+import TechAnimation from "../components/TechAnimation";
 import Testimonials from "../components/Testimonials";
 import SocialProof from "../components/SocialProof";
 import UrgencySection from "../components/UrgencySection";
@@ -50,6 +51,7 @@ const Index = () => {
       <Hero />
       <MischaStory />
       <WhatYouGet />
+      <TechAnimation />
       <Testimonials />
       <SocialProof />
       <UrgencySection />

@@ -107,4 +107,27 @@
   .btn-secondary {
     @apply bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 py-3 px-6 rounded-md font-medium transition-colors duration-300;
   }
+
+  /* Technology animation styles */
+  .tech-icon {
+    @apply transition-all duration-300 hover:scale-125;
+  }
+  
+  .tech-tooltip {
+    @apply absolute opacity-0 bg-black text-white px-2 py-1 rounded text-xs whitespace-nowrap transition-opacity duration-200;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  
+  .tech-icon:hover .tech-tooltip {
+    @apply opacity-100;
+  }
+  
+  /* Orbit animation */
+  .orbit {
+    @apply absolute top-1/2 left-1/2 border border-gray-200 rounded-full;
+    transform: translate(-50%, -50%);
+  }
 }
