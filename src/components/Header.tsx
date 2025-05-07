@@ -53,11 +53,13 @@ const Header = () => {
             transition={{ duration: 0.6 }}
           >
             <a href="/" className="text-2xl font-bold flex items-center">
-              <img 
-                src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
-                alt="KubeCraft Logo" 
-                className="h-10 mr-2" 
-              />
+              <div className="h-10 w-10 mr-2 flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
+                  alt="KubeCraft Logo" 
+                  className="logo-image h-full w-auto object-contain"
+                />
+              </div>
               <span className="gradient-text">KubeCraft</span>
             </a>
             <nav className="hidden md:block ml-12">

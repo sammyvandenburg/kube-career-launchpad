@@ -94,4 +94,17 @@
   .highlight-orange {
     @apply text-amber-500 font-semibold;
   }
+  
+  /* Logo styles */
+  .logo-image {
+    mix-blend-mode: multiply;
+    filter: brightness(1.05) contrast(1.05);
+    max-height: 100%;
+    width: auto;
+  }
+  
+  /* Secondary button with better contrast */
+  .btn-secondary {
+    @apply bg-white text-gray-800 border border-gray-300 hover:bg-gray-100 py-3 px-6 rounded-md font-medium transition-colors duration-300;
+  }
 }
