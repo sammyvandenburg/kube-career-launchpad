@@ -29,7 +29,7 @@ const WhyItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="h-full shadow-md hover:shadow-lg transition-all duration-300">
+            <Card className="h-full shadow-md hover:shadow-lg transition-all duration-300 border-t-2 border-t-kubecraft-blue">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -65,7 +65,7 @@ const WhyItWorks = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="h-full shadow-md hover:shadow-lg transition-all duration-300">
+            <Card className="h-full shadow-md hover:shadow-lg transition-all duration-300 border-t-2 border-t-kubecraft-blue">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
