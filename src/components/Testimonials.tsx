@@ -25,7 +25,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="section-padding bg-white">
+    <section id="testimonials" className="section-padding py-24 bg-gradient-to-b from-kubecraft-lightgray/30 to-white">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"
