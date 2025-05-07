@@ -1,17 +1,50 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Kubernetes, Linux, GitBranch, Terminal, Cog, User, Award } from "lucide-react";
+import { GitBranch, Terminal, Cog, User, Award } from "lucide-react";
 
 // Define the technologies with their icons and names
 const technologies = [
-  { name: "Kubernetes", icon: Kubernetes, color: "#326CE5" },
-  { name: "Linux", icon: Linux, color: "#FCC624" },
-  { name: "Git", icon: GitBranch, color: "#F05032" },
-  { name: "CI/CD", icon: Terminal, color: "#43853D" },
-  { name: "DevOps", icon: Cog, color: "#FF6C37" },
-  { name: "Personal Branding", icon: User, color: "#0A66C2" },
-  { name: "Kubestronaut Certification", icon: Award, color: "#D4AF37" }
+  { 
+    name: "Kubernetes", 
+    imagePath: "/lovable-uploads/e04bfffc-070d-4e5a-b133-08aed599355b.png", 
+    color: "#326CE5" 
+  },
+  { 
+    name: "Azure", 
+    imagePath: "/lovable-uploads/24cab4ad-83b8-47da-8791-afa7f5c13621.png", 
+    color: "#0078D4" 
+  },
+  { 
+    name: "Linux", 
+    imagePath: "/lovable-uploads/1cb65884-972e-4aeb-ab3d-1feb7b4b8b7d.png", 
+    color: "#FCC624" 
+  },
+  { 
+    name: "Git", 
+    imagePath: "/lovable-uploads/c07a3625-ecc1-44f1-8437-278466bbcf46.png", 
+    color: "#F05032" 
+  },
+  { 
+    name: "Arch Linux", 
+    imagePath: "/lovable-uploads/8c3f15e0-d1fa-4aa2-ab91-8cba4cdc4a1b.png", 
+    color: "#1793D1" 
+  },
+  { 
+    name: "Docker", 
+    imagePath: "/lovable-uploads/f76f6cb2-b537-42ca-adb5-c53c74e872e1.png", 
+    color: "#2496ED" 
+  },
+  { 
+    name: "Python", 
+    imagePath: "/lovable-uploads/725f40d1-e931-499a-b6ba-3e16dc9dca2a.png", 
+    color: "#3776AB" 
+  },
+  { 
+    name: "GitHub", 
+    imagePath: "/lovable-uploads/93c69ba2-f087-49dc-b3d8-318e753e5ac1.png", 
+    color: "#181717" 
+  }
 ];
 
 const TechAnimation = () => {
@@ -128,7 +161,11 @@ const TechAnimation = () => {
                   >
                     <div className="absolute -translate-x-1/2 -translate-y-1/2">
                       <div className="bg-white p-3 rounded-full shadow-lg flex items-center justify-center w-14 h-14">
-                        <tech.icon size={30} color={tech.color} strokeWidth={1.5} />
+                        <img 
+                          src={tech.imagePath} 
+                          alt={tech.name} 
+                          className="w-8 h-8 object-contain"
+                        />
                       </div>
                       
                       {/* Tooltip */}
