@@ -44,7 +44,8 @@ const Hero = () => {
             {[
               "True hands-on DevOps Masterclass (50+ hours)",
               "Active community of industry experts",
-              "Weekly mentorship calls"
+              "Weekly mentorship calls",
+              "Learn how to <span class='text-amber-300'>actually</span> get hired"
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -56,8 +57,8 @@ const Hero = () => {
                 <div className="mt-1 bg-green-100 p-1.5 rounded-full">
                   <Check className="h-4 w-4 text-green-600" />
                 </div>
-                <p className="text-lg text-white/95 font-medium">
-                  {item}
+                <p className="text-lg text-white/95 font-medium" 
+                   dangerouslySetInnerHTML={{ __html: item }}>
                 </p>
               </motion.div>
             ))}
@@ -90,15 +91,15 @@ const Hero = () => {
 
           {/* Award badge */}
           <motion.div
-            className="mt-10 inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20"
+            className="mt-10 inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20 hover:scale-105 transition-transform duration-300"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
             <div className="bg-amber-100 p-2 rounded-full">
-              <Award className="h-5 w-5 text-amber-600" />
+              <span className="text-amber-600 text-lg">🏆</span>
             </div>
-            <span className="text-sm font-medium text-white">🏆 Top 1% Skool Community Award</span>
+            <span className="text-sm font-medium text-white">Top 1% Skool Community Award</span>
           </motion.div>
         </div>
       </div>
