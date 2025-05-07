@@ -7,11 +7,10 @@ import WhatYouGet from "../components/WhatYouGet";
 import TechAnimation from "../components/TechAnimation";
 import Testimonials from "../components/Testimonials";
 import SocialProof from "../components/SocialProof";
-import UrgencySection from "../components/UrgencySection";
+import WhyJoinWithGuarantee from "../components/WhyJoinWithGuarantee";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 import FloatingCTA from "../components/FloatingCTA";
-import WhyJoinWithGuarantee from "../components/WhyJoinWithGuarantee";
 import { motion, useScroll, useAnimation } from "framer-motion";
 
 const Index = () => {
@@ -56,7 +55,6 @@ const Index = () => {
       <Testimonials />
       <SocialProof />
       <WhyJoinWithGuarantee />
-      <UrgencySection />
       <FinalCTA />
       <Footer />
       <FloatingCTA />

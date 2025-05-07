@@ -49,13 +49,23 @@ const WhyJoinWithGuarantee = () => {
           
           <h4 className="text-xl font-bold mb-4 mt-10">Here's our commitment to you:</h4>
           <ul className="mb-8 space-y-4">
-            <li className="flex items-start gap-2">
-              <span className="font-bold text-lg">• No long-term contracts</span> 
-              <span className="text-lg">Stay because you're growing, not because you're forced to.</span>
+            <li className="flex items-start gap-3">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <div>
+                <span className="font-bold text-lg">No long-term contracts</span> 
+                <span className="text-lg"> - Stay because you're growing, not because you're forced to.</span>
+              </div>
             </li>
-            <li className="flex items-start gap-2">
-              <span className="font-bold text-lg">• Simple, no-hassle cancellation</span>
-              <span className="text-lg">If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
+            <li className="flex items-start gap-3">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <div>
+                <span className="font-bold text-lg">Simple, no-hassle cancellation</span>
+                <span className="text-lg"> - If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
+              </div>
             </li>
           </ul>
           
