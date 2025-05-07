@@ -1,135 +1,104 @@
 
-import { ArrowRight, ChevronDown, Award, Briefcase, HandHelping } from "lucide-react";
+import { ArrowRight, ChevronDown, Award, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-kubecraft-lightgray via-white to-white pt-32 pb-24 md:pt-36 md:pb-28 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-kubecraft-blue/90 via-kubecraft-blue/80 to-kubecraft-darkblue pt-32 pb-24 md:pt-36 md:pb-28 relative overflow-hidden">
       {/* Abstract Background Elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-10 z-0">
-        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-kubecraft-blue/30 blur-2xl"></div>
-        <div className="absolute top-20 right-10 w-60 h-60 rounded-full bg-kubecraft-blue/20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-1/4 w-40 h-40 rounded-full bg-kubecraft-teal/20 blur-2xl"></div>
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-30"></div>
+        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-blue-300/20 blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-60 h-60 rounded-full bg-blue-200/20 blur-3xl"></div>
+        <div className="absolute bottom-10 left-1/4 w-40 h-40 rounded-full bg-teal-200/20 blur-3xl"></div>
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <motion.div 
-            className="flex-1"
-            initial={{ opacity: 0, y: 30 }}
+        <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+          <motion.h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              The #1 DevOps Community to <span className="text-kubecraft-blue">Land Jobs & Boost Your Career</span>
-            </motion.h1>
-            
-            <motion.p 
-              className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Become a DevOps engineer, fast-track your career, and join 600+ members already earning 6 figures.
-            </motion.p>
-
-            <motion.div 
-              className="space-y-4 mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <div className="flex items-start gap-4">
-                <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                  <Award className="h-5 w-5 text-green-600" />
-                </div>
-                <p className="text-lg text-gray-700">
-                  Proven step-by-step roadmap
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                  <Briefcase className="h-5 w-5 text-green-600" />
-                </div>
-                <p className="text-lg text-gray-700">
-                  Hands-on job experience with internship
-                </p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="mt-1.5 bg-green-100 p-2 rounded-full">
-                  <HandHelping className="h-5 w-5 text-green-600" />
-                </div>
-                <p className="text-lg text-gray-700">
-                  Powerful network, mentorship & job referrals
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-5"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-            >
-              <Button 
-                size="lg" 
-                className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white text-lg px-8 py-6 rounded-xl shadow-lg flex items-center gap-2 group transition-all duration-300 hover:shadow-xl hover:scale-105"
-                onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
-              >
-                <span>Join KubeCraft Today</span>
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg border-2 border-kubecraft-blue text-kubecraft-blue hover:bg-kubecraft-blue hover:text-white px-8 py-6 rounded-xl transition-all duration-300"
-                onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <span>See Member Stories</span>
-                <ChevronDown className="ml-1 h-5 w-5" />
-              </Button>
-            </motion.div>
-
-            {/* Award badge */}
-            <motion.div
-              className="mt-10 inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white rounded-full shadow-md border border-gray-100"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-            >
-              <div className="bg-amber-100 p-2 rounded-full">
-                <Award className="h-5 w-5 text-amber-600" />
-              </div>
-              <span className="text-sm font-medium">🏆 Top 1% Skool Community Award</span>
-            </motion.div>
-          </motion.div>
+            The #1 Awarded DevOps Community to Land Jobs, Stand Out & Stay Ahead
+          </motion.h1>
           
+          <motion.p 
+            className="text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            DevOps is in high demand and highly paid, but landing a job on your own can feel impossible.
+            <br className="hidden md:block" /> When you're surrounded by people who've already done it, everything changes.
+          </motion.p>
+
           <motion.div 
-            className="flex-1 mt-8 md:mt-0 max-w-md mx-auto md:max-w-none"
+            className="space-y-4 mb-10 text-left max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {[
+              "True hands-on DevOps Masterclass (50+ hours)",
+              "Active community of industry experts",
+              "Weekly mentorship calls"
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                className="flex items-start gap-4"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 + (i * 0.1) }}
+              >
+                <div className="mt-1 bg-green-100 p-1.5 rounded-full">
+                  <Check className="h-4 w-4 text-green-600" />
+                </div>
+                <p className="text-lg text-white/95">
+                  {item}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-5 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Button 
+              size="lg" 
+              className="bg-amber-500 hover:bg-amber-600 text-white text-lg px-8 py-6 rounded-xl shadow-lg flex items-center gap-2 group transition-all duration-300 hover:shadow-xl hover:scale-105"
+              onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
+            >
+              <span>Join KubeCraft Today</span>
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg border-2 border-white text-white hover:bg-white/10 px-8 py-6 rounded-xl transition-all duration-300"
+              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <span>See Member Stories</span>
+              <ChevronDown className="ml-1 h-5 w-5" />
+            </Button>
+          </motion.div>
+
+          {/* Award badge */}
+          <motion.div
+            className="mt-10 inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 1.0 }}
           >
-            <div className="relative">
-              <div className="absolute -z-10 -top-6 -left-6 w-full h-full rounded-2xl bg-kubecraft-blue/10 blur-sm"></div>
-              <motion.div
-                className="h-[400px] rounded-2xl shadow-2xl bg-white p-8 flex items-center justify-center overflow-hidden border-4 border-white"
-                whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
-                transition={{ duration: 0.5 }}
-              >
-                <img
-                  src="/lovable-uploads/8ba9d379-c66b-4414-86b4-8509520d0a49.png"
-                  alt="KubeCraft Logo"
-                  className="w-full max-w-[320px] object-contain"
-                />
-              </motion.div>
+            <div className="bg-amber-100 p-2 rounded-full">
+              <Award className="h-5 w-5 text-amber-600" />
             </div>
+            <span className="text-sm font-medium text-white">🏆 Top 1% Skool Community Award</span>
           </motion.div>
         </div>
       </div>
