@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const WhyJoinWithGuarantee = () => {
   return (
-    <section className="section-padding bg-gradient-to-b from-white to-kubecraft-lightgray/30">
+    <section className="section-padding bg-white">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"

@@ -8,6 +8,7 @@ import TechAnimation from "../components/TechAnimation";
 import Testimonials from "../components/Testimonials";
 import SocialProof from "../components/SocialProof";
 import WhyJoinWithGuarantee from "../components/WhyJoinWithGuarantee";
+import WhyJoinNow from "../components/WhyJoinNow";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 import FloatingCTA from "../components/FloatingCTA";
@@ -55,6 +56,7 @@ const Index = () => {
       <Testimonials />
       <SocialProof />
       <WhyJoinWithGuarantee />
+      <WhyJoinNow />
       <FinalCTA />
       <Footer />
       <FloatingCTA />
