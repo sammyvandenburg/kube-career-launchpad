@@ -88,7 +88,7 @@ const TechAnimation = () => {
           </p>
         </motion.div>
 
-        {/* Technology grid - without the central logo */}
+        {/* Technology grid */}
         <TooltipProvider>
           <motion.div 
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8"
@@ -109,12 +109,11 @@ const TechAnimation = () => {
                   <TooltipTrigger asChild>
                     <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300">
                       <div className="flex items-center justify-center h-16 mb-3">
+                        {/* Using plain HTML img tag with explicit width and height */}
                         <img
                           src={tech.imagePath}
                           alt={tech.name}
-                          width="48"
-                          height="48"
-                          style={{ maxHeight: "48px", maxWidth: "48px" }}
+                          className="w-12 h-12 object-contain"
                         />
                       </div>
                       <span className="text-sm font-medium text-kubecraft-gray text-center">
@@ -133,6 +132,18 @@ const TechAnimation = () => {
             ))}
           </motion.div>
         </TooltipProvider>
+        
+        {/* For debugging purposes, let's add a direct image to verify path resolution */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500 mb-2">Debug image check:</p>
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/e04bfffc-070d-4e5a-b133-08aed599355b.png" 
+              alt="Kubernetes Debug" 
+              className="w-12 h-12" 
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
