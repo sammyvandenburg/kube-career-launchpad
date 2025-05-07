@@ -48,8 +48,7 @@ const FinalCTA = () => {
           
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-xl mb-10 opacity-95 max-w-3xl mx-auto">
-              Join now and build your DevOps career with the support of our expert community.
-              Stop struggling alone - success is just one click away.
+              Join now and get the step-by-step system, internship, and expert coaching to accelerate your DevOps career. Stop struggling alone — success is just one click away.
             </p>
           </motion.div>
           
@@ -60,7 +59,7 @@ const FinalCTA = () => {
               className="bg-white text-[#326CE5] hover:bg-gray-100 hover:text-[#2251B9] text-xl px-10 py-7 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
-              <span>Join KubeCraft Community Today</span>
+              <span>Join KubeCraft Today</span>
               <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </motion.div>
@@ -68,15 +67,9 @@ const FinalCTA = () => {
           <motion.div variants={itemVariants}>
             <div className="mt-8 p-4 bg-white/10 max-w-md mx-auto rounded-xl backdrop-blur-sm">
               <p className="text-white/90">
-                <span className="font-bold">600+</span> members have already joined!
+                <span className="font-bold">600+</span> members already joined — Secure your place now!
               </p>
             </div>
-          </motion.div>
-          
-          <motion.div variants={itemVariants}>
-            <p className="mt-6 text-sm opacity-80">
-              Limited spots available - Secure your place now!
-            </p>
           </motion.div>
         </motion.div>
       </div>

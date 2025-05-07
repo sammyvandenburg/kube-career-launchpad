@@ -44,12 +44,12 @@ const MischaStory = () => {
               <p className="text-kubecraft-blue font-semibold uppercase tracking-wider text-sm">Mischa's Story</p>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-kubecraft-gray">
-              From Nurse to DevOps Engineer in Just <span className="text-kubecraft-blue">6 Months</span>
+              From Nurse to DevOps Engineer in <span className="text-kubecraft-blue">6 Months</span>
             </h2>
             <div className="space-y-6 mb-10">
               <p className="text-xl text-gray-700">
-                I went from nursing to DevOps in just 6 months, doubled my salary, built a 46k YouTube channel,
-                and now help others do the same.
+                I went from nursing to DevOps in just 6 months, doubled my salary, and grew a 46K YouTube channel. 
+                Now I help others do the same.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -73,7 +73,7 @@ const MischaStory = () => {
                     <UserCheck className="h-5 w-5 text-green-600" />
                   </div>
                   <p className="text-lg text-gray-700">
-                    Get personalized guidance
+                    Get personal coaching + job-ready skills
                   </p>
                 </div>
               </div>

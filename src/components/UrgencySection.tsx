@@ -1,7 +1,6 @@
 
 import { Clock, DollarSign, Users, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 const UrgencySection = () => {
   return (
@@ -15,7 +14,7 @@ const UrgencySection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            Why Join <span className="text-kubecraft-blue">Now</span>
+            Why Join <span className="text-kubecraft-blue">Now?</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Don't wait to start your DevOps journey - here's why now is the perfect time.
@@ -36,10 +35,10 @@ const UrgencySection = () => {
                 <DollarSign className="h-7 w-7 text-green-600" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-kubecraft-gray">
-                DevOps salaries average <span className="text-green-600">$158,000/year</span>
+                <span className="text-green-600">$158,000</span> average DevOps salary
               </h3>
               <p className="text-gray-700">
-                One of the highest-paid tech specializations with growing demand globally.
+                Get into one of the highest-paid tech careers
               </p>
             </div>
           </motion.div>
@@ -60,7 +59,7 @@ const UrgencySection = () => {
                 Annual membership = <span className="text-kubecraft-blue">6 months free</span>
               </h3>
               <p className="text-gray-700">
-                Get all content unlocked and save with our annual membership option.
+                Save 50% when you commit to a year
               </p>
             </div>
           </motion.div>
@@ -81,10 +80,10 @@ const UrgencySection = () => {
                 Price increases <span className="text-red-600">soon</span>
               </h3>
               <p className="text-gray-700">
-                Lock in today's price before our next scheduled price increase.
+                Join before the next scheduled price rise
               </p>
               <div className="mt-4 bg-red-50 text-red-700 text-center py-2 rounded-md border border-red-100">
-                <p className="font-medium text-sm">Limited spots available!</p>
+                <p className="font-medium text-sm">⚡ Limited spots available — don't wait</p>
               </div>
             </div>
           </motion.div>

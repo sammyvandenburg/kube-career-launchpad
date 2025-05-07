@@ -2,19 +2,8 @@
 import { ArrowRight, ChevronDown, Award, Briefcase, HandHelping } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Lottie from "react-lottie";
-import kubecraftAnimation from "../assets/kubecraft-animation.json";
 
 const Hero = () => {
-  const lottieOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: kubecraftAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
-
   return (
     <section className="bg-gradient-to-b from-kubecraft-lightgray via-white to-white pt-32 pb-24 md:pt-36 md:pb-28 relative overflow-hidden">
       {/* Abstract Background Elements */}
@@ -38,7 +27,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              The #1 DevOps Community for <span className="text-kubecraft-blue">Landing Jobs & Earning More</span>
+              The #1 DevOps Community to <span className="text-kubecraft-blue">Land Jobs & Boost Your Career</span>
             </motion.h1>
             
             <motion.p 
@@ -47,7 +36,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Become a DevOps engineer, fast-track your career, and join hundreds already earning 6 figures.
+              Become a DevOps engineer, fast-track your career, and join 600+ members already earning 6 figures.
             </motion.p>
 
             <motion.div 
@@ -69,7 +58,7 @@ const Hero = () => {
                   <Briefcase className="h-5 w-5 text-green-600" />
                 </div>
                 <p className="text-lg text-gray-700">
-                  Hands-on job experience (internship)
+                  Hands-on job experience with internship
                 </p>
               </div>
               <div className="flex items-start gap-4">
@@ -77,7 +66,7 @@ const Hero = () => {
                   <HandHelping className="h-5 w-5 text-green-600" />
                 </div>
                 <p className="text-lg text-gray-700">
-                  Powerful network & mentorship
+                  Powerful network, mentorship & job referrals
                 </p>
               </div>
             </motion.div>
@@ -102,7 +91,7 @@ const Hero = () => {
                 className="text-lg border-2 border-kubecraft-blue text-kubecraft-blue hover:bg-kubecraft-blue hover:text-white px-8 py-6 rounded-xl transition-all duration-300"
                 onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <span>See Testimonials</span>
+                <span>See Member Stories</span>
                 <ChevronDown className="ml-1 h-5 w-5" />
               </Button>
             </motion.div>
@@ -117,7 +106,7 @@ const Hero = () => {
               <div className="bg-amber-100 p-2 rounded-full">
                 <Award className="h-5 w-5 text-amber-600" />
               </div>
-              <span className="text-sm font-medium">Top 1% Community Builder on Skool</span>
+              <span className="text-sm font-medium">🏆 Top 1% Skool Community Award</span>
             </motion.div>
           </motion.div>
           
@@ -134,7 +123,11 @@ const Hero = () => {
                 whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
                 transition={{ duration: 0.5 }}
               >
-                <Lottie options={lottieOptions} height={300} width={300} />
+                <img
+                  src="https://kubernetes.io/images/kubernetes-horizontal-color.png"
+                  alt="Kubernetes Logo"
+                  className="w-full max-w-[320px] object-contain"
+                />
               </motion.div>
             </div>
           </motion.div>

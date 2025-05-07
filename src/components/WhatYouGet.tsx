@@ -5,37 +5,37 @@ import { motion } from "framer-motion";
 const featuresList = [
   {
     title: "DevOps Masterclass",
-    description: "50+ hours of hands-on training with real-world projects and expert guidance",
+    description: "50+ hours of practical, hands-on training",
     icon: BookOpen,
     highlight: true
   },
   {
     title: "Enterprise Azure Lab",
-    description: "Real production environment access for hands-on experience",
+    description: "Work in real production-grade environments",
     icon: ShieldCheck,
     highlight: false
   },
   {
     title: "Internship Program",
-    description: "Add official work experience to LinkedIn + CV that employers value",
+    description: "Add real-world experience to your CV + LinkedIn",
     icon: Award,
     highlight: true
   },
   {
     title: "Weekly Coaching Calls",
-    description: "Get direct help from experts who've already walked the path",
+    description: "Get direct help from experts",
     icon: Calendar,
     highlight: false
   },
   {
     title: "Expert Community",
-    description: "600+ engineers from Google, Microsoft, IBM ready to help you succeed",
+    description: "600+ engineers from top companies",
     icon: Users,
     highlight: true
   },
   {
     title: "CV & LinkedIn Accelerator",
-    description: "Stand out to top employers with our proven profile optimization",
+    description: "Stand out and attract top employers",
     icon: MessageSquare,
     highlight: false
   }
@@ -53,7 +53,7 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            What You Get <span className="text-kubecraft-blue">(€8,000+ Value)</span>
+            What You'll Get <span className="text-kubecraft-blue">(Worth €8,000+)</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Everything you need to launch your DevOps career and stay ahead in the competitive tech industry.

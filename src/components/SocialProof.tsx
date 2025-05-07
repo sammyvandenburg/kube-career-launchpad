@@ -13,7 +13,7 @@ const SocialProof = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-kubecraft-gray">
-            Our Members Work At Top Companies
+            Our Members Work At
           </h2>
         </motion.div>
 

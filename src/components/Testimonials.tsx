@@ -6,19 +6,19 @@ const testimonials = [
   {
     name: "Michael T.",
     role: "DevOps Engineer",
-    content: "Best investment in my career. The hands-on projects and Azure lab environments provided the practical experience employers were looking for.",
+    content: "Best investment I made in my career.",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg"
   },
   {
     name: "Sarah K.",
     role: "Cloud Engineer",
-    content: "Landed my first cloud role within 3 months. The weekly coaching calls and community support made all the difference in my job search.",
+    content: "Landed my first cloud role in 3 months.",
     avatar: "https://randomuser.me/api/portraits/women/63.jpg"
   },
   {
     name: "Alex R.",
-    role: "DevOps Lead",
-    content: "Without KubeCraft, I'd never have become a DevOps engineer. The mentorship and step-by-step roadmap took me from complete beginner to hired.",
+    role: "DevOps Engineer",
+    content: "Without KubeCraft, I'd still be stuck as a beginner.",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   }
 ];
@@ -35,7 +35,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            What Our <span className="text-kubecraft-blue">Community Members</span> Say
+            What Our <span className="text-kubecraft-blue">Members Say</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Join hundreds of successful engineers who transformed their careers with KubeCraft.
