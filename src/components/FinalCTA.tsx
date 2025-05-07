@@ -48,9 +48,10 @@ const FinalCTA = () => {
           
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto font-medium">
-              Join now and get the complete DevOps career acceleration system: step-by-step training, 
-              hands-on internships, and expert coaching designed to fast-track your success. 
-              Don't stay stuck trying to figure it out alone — your breakthrough is just one click away.
+              Join a proven system with expert coaching, hands-on courses, and a community that has your back 
+              whether you want to land your first DevOps job or scale to six figures and beyond.
+              <br className="hidden md:block mt-2" />
+              Stop figuring it out on your own. Your breakthrough is just one click away.
             </p>
           </motion.div>
 
