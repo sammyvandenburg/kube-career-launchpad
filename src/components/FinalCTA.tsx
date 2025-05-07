@@ -47,9 +47,17 @@ const FinalCTA = () => {
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <p className="text-lg md:text-xl mb-10 opacity-95 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 opacity-95 max-w-3xl mx-auto">
               Join now and get the step-by-step system, internship, and expert coaching to accelerate your DevOps career. Stop struggling alone — success is just one click away.
             </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <div className="mb-10 p-5 bg-white/10 rounded-xl backdrop-blur-sm">
+              <p className="text-white text-lg md:text-xl font-medium">
+                <span className="font-bold">Annual Membership Bonus:</span> Sign up for an annual membership and get 5 months free.
+              </p>
+            </div>
           </motion.div>
           
           <motion.div variants={itemVariants}>

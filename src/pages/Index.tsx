@@ -11,6 +11,7 @@ import UrgencySection from "../components/UrgencySection";
 import FinalCTA from "../components/FinalCTA";
 import Footer from "../components/Footer";
 import FloatingCTA from "../components/FloatingCTA";
+import WhyJoinWithGuarantee from "../components/WhyJoinWithGuarantee";
 import { motion, useScroll, useAnimation } from "framer-motion";
 
 const Index = () => {
@@ -54,6 +55,7 @@ const Index = () => {
       <TechAnimation />
       <Testimonials />
       <SocialProof />
+      <WhyJoinWithGuarantee />
       <UrgencySection />
       <FinalCTA />
       <Footer />

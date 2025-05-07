@@ -75,19 +75,19 @@ const Testimonials = () => {
           </div>
         </motion.div>
         
-        {/* Enhanced "Why it works" section */}
         <motion.div 
-          className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 mb-16 border border-gray-200"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl text-center font-bold mb-6 text-kubecraft-gray">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-kubecraft-gray">
             Our members don't just learn technical skills — <span className="text-kubecraft-blue">they get:</span>
           </h3>
+          
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
                 <Check className="h-6 w-6 text-green-600" />
               </div>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                 Real-world experience employers value
               </p>
             </div>
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
                 <Check className="h-6 w-6 text-green-600" />
               </div>
@@ -103,7 +103,7 @@ const Testimonials = () => {
                 A supportive network that opens doors
               </p>
             </div>
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
                 <Check className="h-6 w-6 text-green-600" />
               </div>
@@ -111,7 +111,7 @@ const Testimonials = () => {
                 Mentorship and coaching from experienced engineers
               </p>
             </div>
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
                 <Check className="h-6 w-6 text-green-600" />
               </div>
