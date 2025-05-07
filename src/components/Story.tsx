@@ -1,5 +1,5 @@
 
-import { Award, Check, ArrowRight } from "lucide-react";
+import { Award, Check, ArrowRight, UserCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -48,15 +48,16 @@ const Story = () => {
             </h2>
             <div className="space-y-6 mb-10">
               <p className="text-xl text-gray-700">
-                I went from nurse to DevOps engineer in 6 months, built a 46K+ YouTube Channel and now earn 6-figures Freelancing, making jobs come to me.
+                I went from nursing to DevOps in just 6 months, doubled my salary, built a 46k YouTube channel,
+                and now help others do the same.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="mt-1 bg-green-100 p-1 rounded-full">
-                    <Check className="h-4 w-4 text-green-600" />
+                    <Users className="h-4 w-4 text-green-600" />
                   </div>
                   <p className="text-lg text-gray-700">
-                    Join the #1 Awarded community of 600+ Engineers
+                    Join 600+ engineers
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -64,15 +65,15 @@ const Story = () => {
                     <Check className="h-4 w-4 text-green-600" />
                   </div>
                   <p className="text-lg text-gray-700">
-                    Follow our proven system to high-paying careers
+                    Follow a proven system
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="mt-1 bg-green-100 p-1 rounded-full">
-                    <Check className="h-4 w-4 text-green-600" />
+                    <UserCheck className="h-4 w-4 text-green-600" />
                   </div>
                   <p className="text-lg text-gray-700">
-                    Get personalized guidance that actually works
+                    Get personalized guidance
                   </p>
                 </div>
               </div>

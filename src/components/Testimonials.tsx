@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Alex R.",
+    name: "Michael T.",
     role: "DevOps Engineer",
-    content: "I joined KubeCraft with zero knowledge of IT and now I'm a DevOps Engineer. The community support and resources were instrumental in my career transition.",
+    content: "Best investment in my career. The hands-on projects and Azure lab environments provided the practical experience employers were looking for.",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg"
   },
   {
     name: "Sarah K.",
     role: "Cloud Engineer",
-    content: "Within 3 months of joining KubeCraft, I landed my first cloud role. The hands-on projects and weekly coaching calls made all the difference in my job search.",
+    content: "Landed my first cloud role within 3 months. The weekly coaching calls and community support made all the difference in my job search.",
     avatar: "https://randomuser.me/api/portraits/women/63.jpg"
   },
   {
-    name: "Michael T.",
+    name: "Alex R.",
     role: "DevOps Lead",
-    content: "Best investment I've made in my career. The Kubernetes workshops and Azure lab environments provided the practical experience employers were looking for.",
+    content: "Without KubeCraft, I'd never have become a DevOps engineer. The mentorship and step-by-step roadmap took me from complete beginner to hired.",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   }
 ];

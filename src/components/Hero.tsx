@@ -1,5 +1,5 @@
 
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Award, Briefcase, HandHelping } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -20,7 +20,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              The #1 DevOps Community for <span className="text-kubecraft-blue">Getting In, Standing Out & Staying Ahead</span>
+              The #1 DevOps Community for <span className="text-kubecraft-blue">Landing Jobs & Earning More</span>
             </motion.h1>
             <motion.p 
               className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-10"
@@ -28,21 +28,53 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              DevOps is in high-demand and high-paid, but landing a job alone can feel impossible.
-              When you&apos;re surrounded by people who&apos;ve already done it, <span className="font-semibold text-kubecraft-gray">everything changes.</span>
+              Become a DevOps engineer, fast-track your career, and join hundreds already earning 6 figures.
             </motion.p>
+
+            <motion.div 
+              className="space-y-4 mb-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <div className="flex items-start gap-3">
+                <div className="mt-1 bg-green-100 p-2 rounded-full">
+                  <Award className="h-5 w-5 text-green-600" />
+                </div>
+                <p className="text-lg text-gray-700">
+                  Proven step-by-step roadmap
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="mt-1 bg-green-100 p-2 rounded-full">
+                  <Briefcase className="h-5 w-5 text-green-600" />
+                </div>
+                <p className="text-lg text-gray-700">
+                  Hands-on job experience (internship)
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="mt-1 bg-green-100 p-2 rounded-full">
+                  <HandHelping className="h-5 w-5 text-green-600" />
+                </div>
+                <p className="text-lg text-gray-700">
+                  Powerful network & mentorship
+                </p>
+              </div>
+            </motion.div>
+
             <motion.div 
               className="flex flex-col sm:flex-row gap-5"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
             >
               <Button 
                 size="lg" 
                 className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white text-lg px-8 py-6 rounded-xl flex items-center gap-2 group transition-all duration-300"
                 onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
               >
-                <span>Join KubeCraft Now</span>
+                <span>Join KubeCraft Today</span>
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
               <Button 

@@ -14,7 +14,7 @@ const Bonuses = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            Exclusive <span className="text-kubecraft-blue">Bonuses</span> <span className="text-xl md:text-2xl">(Worth $2,000+)</span>
+            Exclusive <span className="text-kubecraft-blue">Bonuses</span> <span className="text-xl md:text-2xl">(€2,000+ Value)</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Get these special bonuses when you join our community today.
@@ -42,7 +42,7 @@ const Bonuses = () => {
               <h3 className="font-bold text-2xl text-kubecraft-gray">KubeCraft Internship</h3>
             </div>
             <p className="text-lg text-gray-700 mb-6 flex-grow">
-              Gain real DevOps job experience and get my personal CV reference to boost your job applications.
+              Real-world projects + reference to boost your job applications.
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
@@ -86,10 +86,10 @@ const Bonuses = () => {
               <div className="bg-kubecraft-teal/15 p-3 rounded-full">
                 <Gift className="h-6 w-6 text-kubecraft-teal" />
               </div>
-              <h3 className="font-bold text-2xl text-kubecraft-gray">400+ Exclusive LinkedIn Connections</h3>
+              <h3 className="font-bold text-2xl text-kubecraft-gray">400+ LinkedIn Connections</h3>
             </div>
             <p className="text-lg text-gray-700 mb-6 flex-grow">
-              Get connected with industry professionals and hiring managers who can fast-track your career.
+              Network with hiring managers and decision makers who can fast-track your career.
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
