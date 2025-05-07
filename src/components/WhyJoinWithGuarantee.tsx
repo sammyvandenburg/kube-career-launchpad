@@ -15,7 +15,7 @@ const WhyJoinWithGuarantee = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            Take action today and build a <span className="text-kubecraft-blue">business that lasts!</span>
+            Take action today and transform your <span className="text-kubecraft-blue">DevOps career!</span>
           </h2>
         </motion.div>
 
@@ -41,10 +41,10 @@ const WhyJoinWithGuarantee = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-kubecraft-gray">
-            The "Improve Your Life" Commitment:
+            The "DevOps Success" Commitment:
           </h3>
           <p className="text-lg mb-6">
-            You'll make a commitment to Zero to Founder, <span className="font-bold">so we want to make a commitment to you</span>. Join our community, attend the live events, and dive into our content. We're confident you'll find immense value in our program.
+            You'll make a commitment to KubeCraft, <span className="font-bold">so we want to make a commitment to you</span>. Join our community, attend the live events, and dive into our content. We're confident you'll find immense value in our program.
           </p>
           
           <h4 className="text-xl font-bold mb-4 mt-10">Here's our promise to you:</h4>
