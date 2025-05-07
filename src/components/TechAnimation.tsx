@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { GitBranch, Terminal, Cog, User, Award } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 // Define the technologies with their icons and names
 const technologies = [
@@ -48,6 +48,28 @@ const technologies = [
 ];
 
 const TechAnimation = () => {
+  // Container animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  // Item animation variants
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-kubecraft-lightgray to-white">
       <div className="container-custom">
@@ -66,124 +88,65 @@ const TechAnimation = () => {
           </p>
         </motion.div>
 
-        <div className="relative h-[500px] md:h-[600px]">
-          {/* Center logo */}
+        {/* Center logo */}
+        <motion.div 
+          className="relative flex justify-center mb-10"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="bg-white h-24 w-24 md:h-28 md:w-28 rounded-full flex items-center justify-center shadow-lg">
+            <img 
+              src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
+              alt="KubeCraft Logo" 
+              className="logo-image h-16 w-16 md:h-20 md:w-20 object-contain"
+            />
+          </div>
+        </motion.div>
+
+        {/* Technology grid */}
+        <TooltipProvider>
           <motion.div 
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="bg-white h-32 w-32 md:h-40 md:w-40 rounded-full flex items-center justify-center shadow-xl">
-              <img 
-                src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
-                alt="KubeCraft Logo" 
-                className="logo-image h-20 w-20 md:h-24 md:w-24 object-contain"
-              />
-            </div>
-          </motion.div>
-          
-          {/* Orbit rings */}
-          <motion.div 
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-gray-200 rounded-full"
-            initial={{ width: 0, height: 0, opacity: 0 }}
-            animate={{ width: "50%", height: "50%", opacity: 0.5 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          />
-          
-          <motion.div 
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-gray-200 rounded-full"
-            initial={{ width: 0, height: 0, opacity: 0 }}
-            animate={{ width: "75%", height: "75%", opacity: 0.4 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          />
-          
-          <motion.div 
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-gray-200 rounded-full"
-            initial={{ width: 0, height: 0, opacity: 0 }}
-            animate={{ width: "100%", height: "100%", opacity: 0.3 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          />
-          
-          {/* Technology icons */}
-          {technologies.map((tech, index) => {
-            // Calculate position on orbit
-            const angleStep = (2 * Math.PI) / technologies.length;
-            const angle = index * angleStep;
-            const orbitRadius = 37.5; // % of container
-            
-            // Different orbit radius for visual interest
-            const radius = index % 2 === 0 ? orbitRadius : orbitRadius * 1.25;
-            
-            // Calculate animation duration with slight variations
-            const duration = 30 + (index * 2);
-            
-            // Calculate delay for staggered entrance
-            const delay = 1 + (index * 0.15);
-            
-            return (
+            {technologies.map((tech, index) => (
               <motion.div
                 key={tech.name}
-                className="absolute top-1/2 left-1/2 hover:z-20"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ 
-                  scale: 1,
-                  opacity: 1,
-                }}
-                transition={{ 
-                  duration: 0.5,
-                  delay: delay
-                }}
-                style={{
-                  width: "60px",
-                  height: "60px",
-                }}
-                whileHover={{ 
-                  scale: 1.2,
-                  zIndex: 20
-                }}
+                variants={itemVariants}
+                className="flex flex-col items-center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <motion.div
-                  className="relative"
-                  animate={{
-                    x: `${radius * Math.cos(angle)}%`,
-                    y: `${radius * Math.sin(angle)}%`,
-                  }}
-                >
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                      duration: duration,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="relative"
-                  >
-                    <div className="absolute -translate-x-1/2 -translate-y-1/2">
-                      <div className="bg-white p-3 rounded-full shadow-lg flex items-center justify-center w-14 h-14">
-                        <img 
-                          src={tech.imagePath} 
-                          alt={tech.name} 
-                          className="w-8 h-8 object-contain"
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300">
+                      <div className="mb-3">
+                        <img
+                          src={tech.imagePath}
+                          alt={tech.name}
+                          className="w-12 h-12 md:w-16 md:h-16 object-contain"
                         />
                       </div>
-                      
-                      {/* Tooltip */}
-                      <motion.div
-                        className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm py-1 px-2 rounded whitespace-nowrap opacity-0 pointer-events-none"
-                        animate={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }}
-                      >
+                      <span className="text-sm md:text-base font-medium text-kubecraft-gray text-center">
                         {tech.name}
-                      </motion.div>
+                      </span>
                     </div>
-                  </motion.div>
-                </motion.div>
+                  </TooltipTrigger>
+                  <TooltipContent 
+                    style={{ backgroundColor: tech.color, color: '#fff' }}
+                    className="font-medium"
+                  >
+                    Master {tech.name}
+                  </TooltipContent>
+                </Tooltip>
               </motion.div>
-            );
-          })}
-        </div>
+            ))}
+          </motion.div>
+        </TooltipProvider>
       </div>
     </section>
   );
