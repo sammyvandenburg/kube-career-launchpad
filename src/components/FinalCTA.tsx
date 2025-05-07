@@ -47,8 +47,10 @@ const FinalCTA = () => {
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <p className="text-lg md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto">
-              Join now and get the step-by-step system, internship, and expert coaching to accelerate your DevOps career. Stop struggling alone — success is just one click away.
+            <p className="text-lg md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto font-medium">
+              Join now and get the complete DevOps career acceleration system: step-by-step training, 
+              hands-on internships, and expert coaching designed to fast-track your success. 
+              Don't stay stuck trying to figure it out alone — your breakthrough is just one click away.
             </p>
           </motion.div>
 
@@ -64,7 +66,7 @@ const FinalCTA = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-white text-[#326CE5] hover:bg-gray-100 hover:text-[#2251B9] text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="bg-[#F97316] hover:bg-[#EA580C] text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Today</span>
