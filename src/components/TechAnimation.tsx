@@ -81,7 +81,7 @@ const TechAnimation = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            Technology <span className="text-kubecraft-blue">Stack</span>
+            Get real, <span className="text-kubecraft-blue">hands-on experience</span> that employers actually want
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Master the cutting-edge technologies that power modern cloud infrastructures
@@ -95,11 +95,11 @@ const TechAnimation = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="bg-white h-24 w-24 md:h-28 md:w-28 rounded-full flex items-center justify-center shadow-lg">
+          <div className="bg-white h-16 w-16 md:h-20 md:w-20 rounded-full flex items-center justify-center shadow-lg">
             <img 
               src="/lovable-uploads/62d392eb-a9ce-41fc-934d-b5bb6aba18e7.png" 
               alt="KubeCraft Logo" 
-              className="logo-image h-16 w-16 md:h-20 md:w-20 object-contain"
+              className="logo-image h-10 w-10 md:h-12 md:w-12 object-contain"
             />
           </div>
         </motion.div>
@@ -123,15 +123,16 @@ const TechAnimation = () => {
               >
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <div className="bg-white rounded-xl shadow-md p-4 md:p-6 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300">
-                      <div className="mb-3">
+                    <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center w-full aspect-square hover:shadow-lg transition-shadow duration-300">
+                      <div className="flex items-center justify-center h-16 mb-3">
                         <img
                           src={tech.imagePath}
                           alt={tech.name}
-                          className="w-12 h-12 md:w-16 md:h-16 object-contain"
+                          className="max-h-full max-w-full object-contain"
+                          style={{ maxWidth: "48px", maxHeight: "48px" }}
                         />
                       </div>
-                      <span className="text-sm md:text-base font-medium text-kubecraft-gray text-center">
+                      <span className="text-sm font-medium text-kubecraft-gray text-center">
                         {tech.name}
                       </span>
                     </div>
