@@ -11,7 +11,7 @@ const featuresList = [
   },
   {
     title: "Enterprise Azure Lab",
-    description: "Work in real production-grade environments",
+    description: "Work in real production-grade environments, NOT simulators!",
     icon: ShieldCheck,
     color: "purple"
   },

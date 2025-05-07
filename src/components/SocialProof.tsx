@@ -18,7 +18,7 @@ const SocialProof = () => {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-3 gap-10 items-center justify-items-center"
+          className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-items-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,6 +56,18 @@ const SocialProof = () => {
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" 
               alt="IBM" 
+              className="h-12 md:h-16 object-contain" 
+            />
+          </motion.div>
+          
+          {/* NVIDIA Logo */}
+          <motion.div 
+            className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1200px-Nvidia_logo.svg.png" 
+              alt="NVIDIA" 
               className="h-12 md:h-16 object-contain" 
             />
           </motion.div>

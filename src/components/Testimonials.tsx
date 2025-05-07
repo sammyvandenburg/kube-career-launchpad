@@ -1,5 +1,5 @@
 
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -42,11 +42,13 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const orange = "#F98C20"; // Using the softer orange option
+  
   return (
     <section id="testimonials" className="section-padding py-24 bg-gradient-to-b from-kubecraft-lightgray/30 to-white">
       <div className="container-custom max-w-7xl">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,9 +57,70 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
             What Our <span className="text-kubecraft-blue">Members Say</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Join hundreds of engineers transforming their careers with KubeCraft.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            Join hundreds of engineers transforming their careers with KubeCraft — and discover why it works.
           </p>
+        </motion.div>
+
+        {/* Featured quotes */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-8 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="bg-white shadow-md rounded-lg px-8 py-4 border-l-4 border-amber-500 max-w-md">
+            <p className="italic text-lg text-gray-700">"I tripled my salary in 6 months thanks to KubeCraft."</p>
+          </div>
+          <div className="bg-white shadow-md rounded-lg px-8 py-4 border-l-4 border-amber-500 max-w-md">
+            <p className="italic text-lg text-gray-700">"I landed a remote DevOps job after a year of struggle."</p>
+          </div>
+        </motion.div>
+        
+        {/* Why it works section */}
+        <motion.div 
+          className="bg-white rounded-xl shadow-md p-8 mb-16 border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <p className="text-xl text-center mb-6 text-gray-800">Our members don't just learn technical skills — they get:</p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-start gap-3">
+              <div className="mt-1.5 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <p className="text-lg text-gray-700">
+                Real-world experience employers value
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="mt-1.5 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <p className="text-lg text-gray-700">
+                A supportive network that opens doors
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="mt-1.5 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <p className="text-lg text-gray-700">
+                Mentorship and coaching from experienced engineers
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="mt-1.5 flex-shrink-0">
+                <Check className="h-5 w-5 text-green-600" />
+              </div>
+              <p className="text-lg text-gray-700">
+                Practical, in-demand skills that <span style={{ color: orange }} className="font-semibold">actually</span> get you hired
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
