@@ -57,7 +57,7 @@ const WhyJoinNow = () => {
                 <Star className="h-7 w-7 text-kubecraft-blue" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-kubecraft-gray">
-                Annual membership = <span className="text-kubecraft-blue">6 months free</span>
+                Annual membership = <span className="text-kubecraft-blue">5 months free</span>
               </h3>
               <p className="text-gray-700">
                 Get all content unlocked and save with our annual membership option.
