@@ -1,3 +1,4 @@
+
 import { Star, Quote, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -53,9 +54,12 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-kubecraft-gray">
-            Real Words From Real Members <span className="text-kubecraft-blue">(We Don't Even Have to Ask)</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-2 text-kubecraft-gray">
+            Real Words From Real Members
           </h2>
+          <p className="text-xl md:text-2xl text-kubecraft-blue mb-6">
+            (We Don't Even Have to Ask)
+          </p>
         </motion.div>
 
         {/* Featured quotes */}
