@@ -1,4 +1,3 @@
-
 import { Star, Quote, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -57,9 +56,9 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-2 text-kubecraft-gray">
             Real Words From Real Members
           </h2>
-          <p className="text-xl md:text-2xl text-kubecraft-blue mb-6">
+          <span className="text-3xl md:text-5xl font-bold text-kubecraft-blue">
             (We Don't Even Have to Ask)
-          </p>
+          </span>
         </motion.div>
 
         {/* Featured quotes */}
