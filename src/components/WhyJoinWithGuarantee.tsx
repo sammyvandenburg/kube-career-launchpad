@@ -26,7 +26,7 @@ const WhyJoinWithGuarantee = () => {
           transition={{ duration: 0.6 }}
         >
           <img 
-            src="/lovable-uploads/a08e8342-245a-426e-b160-769369df9644.png" 
+            src="/lovable-uploads/91600401-dffe-4ecf-a7d2-dcfb86e82bed.png" 
             alt="100% Satisfaction Guaranteed" 
             className="w-64 h-64 object-contain transform transition-transform duration-300 hover:scale-110"
           />
