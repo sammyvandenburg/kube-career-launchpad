@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const WhyJoinWithGuarantee = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"
@@ -13,7 +13,7 @@ const WhyJoinWithGuarantee = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             The KubeCraft DevOps Commitment
           </h2>
         </motion.div>
@@ -39,38 +39,38 @@ const WhyJoinWithGuarantee = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-white">
             We're committed to helping you break into and thrive in DevOps, and success works best when we both bring our best.
           </p>
           
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-8 text-white">
             When you join KubeCraft, you're not just buying a course. You're joining a community built for momentum, accountability, and real results.
           </p>
           
-          <h4 className="text-xl font-bold mb-4 mt-10">Here's our commitment to you:</h4>
+          <h4 className="text-xl font-bold mb-4 mt-10 text-white">Here's our commitment to you:</h4>
           <ul className="mb-8 space-y-4">
             <li className="flex items-start gap-3">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+                <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg">No long-term contracts</span> 
-                <span className="text-lg"> - Stay because you're growing, not because you're forced to.</span>
+                <span className="font-bold text-lg text-white">No long-term contracts</span> 
+                <span className="text-lg text-gray-300"> - Stay because you're growing, not because you're forced to.</span>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-green-600" />
+                <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg">Simple, no-hassle cancellation</span>
-                <span className="text-lg"> - If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
+                <span className="font-bold text-lg text-white">Simple, no-hassle cancellation</span>
+                <span className="text-lg text-gray-300"> - If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
               </div>
             </li>
           </ul>
           
-          <p className="text-xl font-bold mt-8 mb-2">The only real risk is staying stuck and not betting on yourself.</p>
-          <p className="text-lg mb-10">
+          <p className="text-xl font-bold mt-8 mb-2 text-white">The only real risk is staying stuck and not betting on yourself.</p>
+          <p className="text-lg mb-10 text-white">
             Come ready to engage. Join the live sessions, tap into mentorship, and apply the hands-on training. That's where the transformation happens.
           </p>
         </motion.div>

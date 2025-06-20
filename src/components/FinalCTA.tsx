@@ -24,12 +24,12 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-r from-[#326CE5] to-[#3E88F6] overflow-hidden relative">
+    <section className="py-24 bg-black overflow-hidden relative">
       {/* Abstract Background */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute -left-40 -top-40 w-80 h-80 bg-white rounded-full"></div>
-        <div className="absolute right-20 top-20 w-40 h-40 bg-white rounded-full"></div>
-        <div className="absolute -right-20 bottom-10 w-60 h-60 bg-white rounded-full"></div>
+        <div className="absolute -left-40 -top-40 w-80 h-80 bg-kubecraft-terracotta rounded-full"></div>
+        <div className="absolute right-20 top-20 w-40 h-40 bg-kubecraft-green rounded-full"></div>
+        <div className="absolute -right-20 bottom-10 w-60 h-60 bg-kubecraft-terracotta rounded-full"></div>
       </div>
       
       <div className="container-custom relative z-10">
@@ -56,7 +56,7 @@ const FinalCTA = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <div className="mb-10 p-5 bg-white/10 rounded-xl backdrop-blur-sm">
+            <div className="mb-10 p-5 bg-gray-900/20 rounded-xl backdrop-blur-sm">
               <p className="text-white text-lg md:text-xl font-medium">
                 <span className="font-bold">Annual Membership Bonus:</span> Sign up for an annual membership and get 5 months free.
               </p>
@@ -67,7 +67,7 @@ const FinalCTA = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-[#F97316] hover:bg-[#EA580C] text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Today</span>
@@ -76,7 +76,7 @@ const FinalCTA = () => {
           </motion.div>
           
           <motion.div variants={itemVariants}>
-            <div className="mt-8 p-4 bg-white/10 max-w-md mx-auto rounded-xl backdrop-blur-sm">
+            <div className="mt-8 p-4 bg-gray-900/20 max-w-md mx-auto rounded-xl backdrop-blur-sm">
               <p className="text-white/90">
                 <span className="font-bold">600+</span> members already joined — Secure your place now!
               </p>
