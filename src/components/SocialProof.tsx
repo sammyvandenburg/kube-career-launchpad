@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const SocialProof = () => {
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16 bg-black">
       <div className="container-custom max-w-5xl">
         <motion.div 
           className="text-center mb-12"
@@ -26,49 +26,49 @@ const SocialProof = () => {
         >
           {/* Google Logo */}
           <motion.div 
-            className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+            className="grayscale hover:grayscale-0 opacity-90 hover:opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
             <img 
               src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
               alt="Google" 
-              className="h-12 md:h-16 object-contain" 
+              className="h-12 md:h-16 object-contain brightness-150" 
             />
           </motion.div>
           
           {/* Microsoft Logo */}
           <motion.div 
-            className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+            className="grayscale hover:grayscale-0 opacity-90 hover:opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/800px-Microsoft_logo.svg.png" 
               alt="Microsoft" 
-              className="h-12 md:h-16 object-contain" 
+              className="h-12 md:h-16 object-contain brightness-150" 
             />
           </motion.div>
           
           {/* IBM Logo */}
           <motion.div 
-            className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+            className="grayscale hover:grayscale-0 opacity-90 hover:opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/800px-IBM_logo.svg.png" 
               alt="IBM" 
-              className="h-12 md:h-16 object-contain" 
+              className="h-12 md:h-16 object-contain brightness-150" 
             />
           </motion.div>
           
           {/* NVIDIA Logo */}
           <motion.div 
-            className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+            className="grayscale hover:grayscale-0 opacity-90 hover:opacity-100 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
           >
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nvidia_logo.svg/1200px-Nvidia_logo.svg.png" 
               alt="NVIDIA" 
-              className="h-12 md:h-16 object-contain" 
+              className="h-12 md:h-16 object-contain brightness-200 invert" 
             />
           </motion.div>
         </motion.div>
