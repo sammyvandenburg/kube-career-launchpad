@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const SocialProof = () => {
   return (
-    <section className="py-16 bg-kubecraft-lightgray/40">
+    <section className="py-16 bg-gray-900">
       <div className="container-custom max-w-5xl">
         <motion.div 
           className="text-center mb-12"
@@ -12,7 +12,7 @@ const SocialProof = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-kubecraft-gray">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white">
             Our Members Work At
           </h2>
         </motion.div>

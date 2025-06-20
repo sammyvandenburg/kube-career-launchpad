@@ -28,7 +28,7 @@ const FloatingCTA = () => {
           transition={{ duration: 0.3 }}
         >
           <Button 
-            className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white px-6 py-6 rounded-full shadow-xl group hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white px-6 py-6 rounded-full shadow-xl group hover:shadow-2xl hover:scale-105 transition-all duration-300"
             onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
           >
             <span className="font-medium">Join Now</span>

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-gradient-to-r from-[#326CE5] to-[#3E88F6] overflow-hidden relative">
+    <section className="py-24 bg-gradient-to-r from-kubecraft-terracotta to-kubecraft-green overflow-hidden relative">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute -left-40 -top-40 w-80 h-80 bg-white rounded-full"></div>
         <div className="absolute right-20 top-20 w-40 h-40 bg-white rounded-full"></div>
@@ -47,7 +47,7 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-white text-[#326CE5] hover:bg-gray-100 hover:text-[#2251B9] text-xl px-10 py-7 rounded-xl shadow-lg group"
+              className="bg-black text-white hover:bg-gray-900 hover:text-white text-xl px-10 py-7 rounded-xl shadow-lg group"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Community Today</span>

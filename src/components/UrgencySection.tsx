@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const UrgencySection = () => {
   return (
-    <section className="py-16 bg-kubecraft-lightgray">
+    <section className="py-16 bg-gray-900">
       <div className="container-custom">
         <motion.div 
           className="max-w-3xl mx-auto text-center"
@@ -14,14 +14,14 @@ const UrgencySection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Why Join <span className="text-amber-500">KubeCraft</span> Today?</h2>
-          <p className="text-lg text-gray-700 mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why Join <span className="text-kubecraft-terracotta">KubeCraft</span> Today?</h2>
+          <p className="text-lg text-gray-300 mb-10">
             Don't wait - start building your DevOps future now with our supportive community and proven resources.
           </p>
           
           <div className="grid grid-cols-1 gap-6 mb-10">
             <motion.div 
-              className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
+              className="bg-black p-6 rounded-lg shadow-md border border-gray-800"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -32,9 +32,9 @@ const UrgencySection = () => {
                   <ArrowRight className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xl font-bold mb-2 text-gray-800">Annual Membership Bonus</h3>
-                  <p className="text-gray-600">
-                    Sign up for an annual membership and get <span className="text-amber-500 font-semibold">5 months free</span>.
+                  <h3 className="text-xl font-bold mb-2 text-white">Annual Membership Bonus</h3>
+                  <p className="text-gray-300">
+                    Sign up for an annual membership and get <span className="text-kubecraft-terracotta font-semibold">5 months free</span>.
                   </p>
                 </div>
               </div>
@@ -49,7 +49,7 @@ const UrgencySection = () => {
           >
             <Button 
               size="lg" 
-              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 rounded-xl text-lg shadow-lg group transition-all duration-300 hover:shadow-xl hover:scale-105"
+              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white px-8 py-6 rounded-xl text-lg shadow-lg group transition-all duration-300 hover:shadow-xl hover:scale-105"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Today</span>

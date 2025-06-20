@@ -19,7 +19,7 @@ const profiles = [
 
 const WhoItsFor = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"
@@ -28,10 +28,10 @@ const WhoItsFor = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            Who It's <span className="text-kubecraft-blue">For</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            Who It's <span className="text-kubecraft-terracotta">For</span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             KubeCraft is designed for people who want more than just another course.
           </p>
         </motion.div>
@@ -40,7 +40,7 @@ const WhoItsFor = () => {
           {profiles.map((profile, index) => (
             <motion.div 
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+              className="bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -48,11 +48,11 @@ const WhoItsFor = () => {
               whileHover={{ y: -5 }}
             >
               <div className="flex flex-col h-full">
-                <div className="mb-6 bg-kubecraft-blue/10 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                  <UserCheck className="h-7 w-7 text-kubecraft-blue" />
+                <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+                  <UserCheck className="h-7 w-7 text-kubecraft-terracotta" />
                 </div>
-                <h3 className="font-bold text-xl mb-4 text-kubecraft-gray">{profile.title}</h3>
-                <p className="text-gray-700">{profile.description}</p>
+                <h3 className="font-bold text-xl mb-4 text-white">{profile.title}</h3>
+                <p className="text-gray-300">{profile.description}</p>
               </div>
             </motion.div>
           ))}

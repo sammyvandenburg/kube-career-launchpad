@@ -43,7 +43,7 @@ const featuresList = [
 
 const Features = () => {
   return (
-    <section className="section-padding bg-gradient-to-b from-kubecraft-lightgray/30 to-white py-24">
+    <section className="section-padding bg-gradient-to-b from-gray-900 to-black py-24">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"
@@ -52,10 +52,10 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-kubecraft-gray">
-            What You Get <span className="text-kubecraft-blue">(€8,000+ Value)</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            What You Get <span className="text-kubecraft-terracotta">(€8,000+ Value)</span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Everything you need to launch your DevOps career and stay ahead in the competitive tech industry.
           </p>
         </motion.div>
@@ -64,8 +64,8 @@ const Features = () => {
           {featuresList.map((feature, index) => (
             <motion.div 
               key={index} 
-              className={`feature-card bg-white rounded-2xl p-8 h-full flex flex-col hover:shadow-xl transition-all duration-300 ${
-                feature.highlight ? 'border-l-4 border-l-kubecraft-blue' : ''
+              className={`feature-card bg-black rounded-2xl p-8 h-full flex flex-col hover:shadow-xl transition-all duration-300 border border-gray-800 ${
+                feature.highlight ? 'border-l-4 border-l-kubecraft-terracotta' : ''
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -74,12 +74,12 @@ const Features = () => {
               whileHover={{ y: -5 }}
             >
               <div className="flex items-start gap-4">
-                <div className="bg-kubecraft-blue/10 p-3 rounded-lg mt-1">
-                  <feature.icon className="h-6 w-6 text-kubecraft-blue" />
+                <div className="bg-kubecraft-terracotta/20 p-3 rounded-lg mt-1">
+                  <feature.icon className="h-6 w-6 text-kubecraft-terracotta" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-3 text-kubecraft-gray">{feature.title}</h3>
-                  <p className="text-gray-700">{feature.description}</p>
+                  <h3 className="font-bold text-xl mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               </div>
             </motion.div>
