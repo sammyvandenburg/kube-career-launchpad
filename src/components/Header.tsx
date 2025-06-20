@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md py-3' : 'bg-white py-5'
+      scrolled ? 'bg-black shadow-md py-3' : 'bg-black py-5'
     }`}>
       <div className="container-custom">
         <div className="flex justify-between items-center">
@@ -65,13 +65,13 @@ const Header = () => {
             <nav className="hidden md:block ml-12">
               <ul className="flex space-x-10">
                 <li>
-                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Home</a>
+                  <a href="#" className="text-white hover:text-kubecraft-terracotta transition-colors font-medium">Home</a>
                 </li>
                 <li>
-                  <a href="#testimonials" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">Testimonials</a>
+                  <a href="#testimonials" className="text-white hover:text-kubecraft-terracotta transition-colors font-medium">Testimonials</a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-700 hover:text-kubecraft-blue transition-colors font-medium">About</a>
+                  <a href="#" className="text-white hover:text-kubecraft-terracotta transition-colors font-medium">About</a>
                 </li>
               </ul>
             </nav>
@@ -84,7 +84,7 @@ const Header = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Button 
-              className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
+              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               Join Now
@@ -92,7 +92,7 @@ const Header = () => {
           </motion.div>
           
           <motion.button 
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -112,7 +112,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="md:hidden bg-white border-t border-gray-200 absolute w-full left-0 shadow-lg"
+            className="md:hidden bg-black border-t border-gray-800 absolute w-full left-0 shadow-lg"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
@@ -124,7 +124,7 @@ const Header = () => {
                   <motion.li variants={itemVariants}>
                     <a 
                       href="#" 
-                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      className="block text-white hover:text-kubecraft-terracotta transition-colors font-medium text-lg"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Home
@@ -133,7 +133,7 @@ const Header = () => {
                   <motion.li variants={itemVariants}>
                     <a 
                       href="#testimonials" 
-                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      className="block text-white hover:text-kubecraft-terracotta transition-colors font-medium text-lg"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Testimonials
@@ -142,7 +142,7 @@ const Header = () => {
                   <motion.li variants={itemVariants}>
                     <a 
                       href="#" 
-                      className="block text-gray-700 hover:text-kubecraft-blue transition-colors font-medium text-lg"
+                      className="block text-white hover:text-kubecraft-terracotta transition-colors font-medium text-lg"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About
@@ -150,7 +150,7 @@ const Header = () => {
                   </motion.li>
                   <motion.li variants={itemVariants} className="pt-3">
                     <Button 
-                      className="bg-kubecraft-blue hover:bg-kubecraft-darkblue text-white w-full py-3 text-lg rounded-lg"
+                      className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white w-full py-3 text-lg rounded-lg"
                       onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
                     >
                       Join Now

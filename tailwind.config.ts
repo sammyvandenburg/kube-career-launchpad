@@ -63,13 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// KubeCraft custom colors - Updated Kubernetes blue
+				// KubeCraft brand colors - New identity
 				kubecraft: {
-					blue: '#326CE5', // Kubernetes blue
-					darkblue: '#2251B9',
-					teal: '#14B8A6',
-					gray: '#1E293B',
-					lightgray: '#F1F5F9'
+					terracotta: '#DD7A5F',
+					green: '#A3B18A',
+					gray: '#000000',
+					lightgray: '#1a1a1a'
 				}
 			},
 			borderRadius: {
@@ -111,8 +110,9 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				heading: ['Poppins', 'sans-serif']
+				mono: ['JetBrains Mono', 'monospace'],
+				sans: ['JetBrains Mono', 'monospace'],
+				heading: ['JetBrains Mono', 'monospace']
 			}
 		}
 	},

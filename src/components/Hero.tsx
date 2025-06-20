@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-kubecraft-blue/90 via-kubecraft-blue/80 to-kubecraft-darkblue pt-32 pb-24 md:pt-36 md:pb-28 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-black via-gray-900 to-black pt-32 pb-24 md:pt-36 md:pb-28 relative overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-30"></div>
-        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-blue-300/20 blur-3xl"></div>
-        <div className="absolute top-20 right-10 w-60 h-60 rounded-full bg-blue-200/20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-1/4 w-40 h-40 rounded-full bg-teal-200/20 blur-3xl"></div>
+        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-kubecraft-terracotta/20 blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-60 h-60 rounded-full bg-kubecraft-green/20 blur-3xl"></div>
+        <div className="absolute bottom-10 left-1/4 w-40 h-40 rounded-full bg-kubecraft-terracotta/20 blur-3xl"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -22,7 +22,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            The <span className="text-amber-400">#1 Awarded</span> DevOps Community to Land Jobs, Stand Out & Stay Ahead
+            The <span className="text-kubecraft-terracotta">#1 Awarded</span> DevOps Community to Land Jobs, Stand Out & Stay Ahead
           </motion.h1>
           
           <motion.p 
@@ -31,8 +31,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            DevOps is in high demand and highly paid, but landing a job on your own can feel <span className="text-amber-300">impossible</span>.
-            <br className="hidden md:block" /> When you're surrounded by people who've already done it, <span className="text-amber-300">everything changes</span>.
+            DevOps is in high demand and highly paid, but landing a job on your own can feel <span className="text-kubecraft-terracotta">impossible</span>.
+            <br className="hidden md:block" /> When you're surrounded by people who've already done it, <span className="text-kubecraft-green">everything changes</span>.
           </motion.p>
 
           <motion.div 
@@ -72,7 +72,7 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              className="bg-amber-500 hover:bg-amber-600 text-white text-lg px-8 py-6 rounded-xl shadow-lg flex items-center gap-2 group transition-all duration-300 hover:shadow-xl hover:scale-105"
+              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-lg px-8 py-6 rounded-xl shadow-lg flex items-center gap-2 group transition-all duration-300 hover:shadow-xl hover:scale-105"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Today</span>
@@ -81,7 +81,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg border-2 border-white text-black bg-white hover:bg-white/90 px-8 py-6 rounded-xl transition-all duration-300"
+              className="text-lg border-2 border-white text-white bg-transparent hover:bg-white hover:text-black px-8 py-6 rounded-xl transition-all duration-300"
               onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <span>See Member Stories</span>
@@ -96,8 +96,8 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            <div className="bg-amber-100 p-2 rounded-full">
-              <span className="text-amber-600 text-lg">🏆</span>
+            <div className="bg-kubecraft-terracotta/20 p-2 rounded-full">
+              <span className="text-kubecraft-terracotta text-lg">🏆</span>
             </div>
             <span className="text-sm font-medium text-white">Top 1% Skool Community Award</span>
           </motion.div>

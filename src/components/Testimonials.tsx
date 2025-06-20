@@ -1,3 +1,4 @@
+
 import { Star, Quote, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -41,10 +42,10 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const orange = "#F98C20"; // Using the softer orange option
+  const orange = "#DD7A5F"; // Using the ceramic terracotta color
   
   return (
-    <section id="testimonials" className="section-padding py-24 bg-gradient-to-b from-kubecraft-lightgray/30 to-white">
+    <section id="testimonials" className="section-padding py-24 bg-gradient-to-b from-black to-gray-900">
       <div className="container-custom max-w-7xl">
         <motion.div 
           className="text-center mb-12"
@@ -53,10 +54,10 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-2 text-kubecraft-gray">
+          <h2 className="text-3xl md:text-5xl font-bold mb-2 text-white">
             Real Words From Real Members
           </h2>
-          <span className="text-3xl md:text-5xl font-bold text-kubecraft-blue">
+          <span className="text-3xl md:text-5xl font-bold text-kubecraft-green">
             (We Don't Even Have to Ask)
           </span>
         </motion.div>
@@ -69,11 +70,11 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="bg-white shadow-md rounded-lg px-8 py-4 border-l-4 border-amber-500 max-w-md">
-            <p className="italic text-lg text-gray-700">"I tripled my salary in 6 months thanks to KubeCraft."</p>
+          <div className="bg-gray-900 shadow-md rounded-lg px-8 py-4 border-l-4 border-kubecraft-terracotta max-w-md">
+            <p className="italic text-lg text-white">"I tripled my salary in 6 months thanks to KubeCraft."</p>
           </div>
-          <div className="bg-white shadow-md rounded-lg px-8 py-4 border-l-4 border-amber-500 max-w-md">
-            <p className="italic text-lg text-gray-700">"I landed a remote DevOps job after a year of struggle."</p>
+          <div className="bg-gray-900 shadow-md rounded-lg px-8 py-4 border-l-4 border-kubecraft-terracotta max-w-md">
+            <p className="italic text-lg text-white">"I landed a remote DevOps job after a year of struggle."</p>
           </div>
         </motion.div>
         
@@ -84,40 +85,40 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-kubecraft-gray">
-            Our members don't just learn technical skills — <span className="text-kubecraft-blue">they get:</span>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white">
+            Our members don't just learn technical skills — <span className="text-kubecraft-green">they get:</span>
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-6 w-6 text-green-600" />
+                <Check className="h-6 w-6 text-kubecraft-green" />
               </div>
-              <p className="text-xl text-gray-800 font-medium">
+              <p className="text-xl text-white font-medium">
                 Real-world experience employers value
               </p>
             </div>
             <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-6 w-6 text-green-600" />
+                <Check className="h-6 w-6 text-kubecraft-green" />
               </div>
-              <p className="text-xl text-gray-800 font-medium">
+              <p className="text-xl text-white font-medium">
                 A supportive network that opens doors
               </p>
             </div>
             <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-6 w-6 text-green-600" />
+                <Check className="h-6 w-6 text-kubecraft-green" />
               </div>
-              <p className="text-xl text-gray-800 font-medium">
+              <p className="text-xl text-white font-medium">
                 Mentorship and coaching from experienced engineers
               </p>
             </div>
             <div className="flex items-start gap-4 text-left">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-6 w-6 text-green-600" />
+                <Check className="h-6 w-6 text-kubecraft-green" />
               </div>
-              <p className="text-xl text-gray-800 font-medium">
+              <p className="text-xl text-white font-medium">
                 Practical, in-demand skills that <span style={{ color: orange }} className="font-bold">actually</span> get you hired
               </p>
             </div>
@@ -134,27 +135,27 @@ const Testimonials = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="absolute -top-4 -left-4 text-kubecraft-blue opacity-30">
+              <div className="absolute -top-4 -left-4 text-kubecraft-green opacity-30">
                 <Quote size={42} strokeWidth={1.5} />
               </div>
-              <div className="p-8 pt-10 pb-6 bg-white rounded-t-2xl border border-gray-100 shadow-md">
+              <div className="p-8 pt-10 pb-6 bg-gray-900 rounded-t-2xl border border-gray-700 shadow-md">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-kubecraft-blue text-kubecraft-blue" />
+                    <Star key={i} className="h-5 w-5 fill-kubecraft-terracotta text-kubecraft-terracotta" />
                   ))}
                 </div>
-                <p className="text-gray-700 text-lg mb-6">{testimonial.content}</p>
+                <p className="text-white text-lg mb-6">{testimonial.content}</p>
               </div>
-              <div className="mt-auto bg-gray-50 p-6 rounded-b-2xl border-x border-b border-gray-100">
+              <div className="mt-auto bg-gray-800 p-6 rounded-b-2xl border-x border-b border-gray-700">
                 <div className="flex items-center gap-4">
                   <img 
                     src={testimonial.avatar} 
                     alt={testimonial.name} 
-                    className="w-14 h-14 rounded-full object-cover border-2 border-kubecraft-blue/20"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-kubecraft-terracotta/20"
                   />
                   <div>
-                    <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <h4 className="font-bold text-lg text-white">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-300">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
