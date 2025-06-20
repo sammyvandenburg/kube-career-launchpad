@@ -22,7 +22,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            The <span className="text-kubecraft-terracotta">#1 Awarded</span> DevOps Community to Land Jobs, Stand Out & Stay Ahead
+            The DevOps Community Trusted by Engineers at <span className="text-kubecraft-terracotta">Google, Microsoft</span> & <span className="text-kubecraft-green">NVIDIA</span>
           </motion.h1>
           
           <motion.p 
@@ -31,7 +31,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            DevOps is in high demand and highly paid, but landing a job on your own can feel <span className="text-kubecraft-terracotta">impossible</span>.
+            DevOps roles are booming, but landing one without experience can feel <span className="text-kubecraft-terracotta">overwhelming</span>.
             <br className="hidden md:block" /> When you're surrounded by people who've already done it, <span className="text-kubecraft-green">everything changes</span>.
           </motion.p>
 
@@ -42,10 +42,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
-              "True hands-on DevOps Masterclass (50+ hours)",
-              "Active community of industry experts",
-              "Weekly mentorship calls",
-              "Learn how to <span class='text-amber-300'>actually</span> get hired"
+              "Build real projects in production-grade labs",
+              "Get referred by senior engineers",
+              "Weekly live coaching calls and instant feedback",
+              "Access 600+ member LinkedIn profiles to grow your network"
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -57,8 +57,8 @@ const Hero = () => {
                 <div className="mt-1 bg-green-100 p-1.5 rounded-full">
                   <Check className="h-4 w-4 text-green-600" />
                 </div>
-                <p className="text-lg text-white/95 font-medium" 
-                   dangerouslySetInnerHTML={{ __html: item }}>
+                <p className="text-lg text-white/95 font-medium">
+                  {item}
                 </p>
               </motion.div>
             ))}
@@ -89,9 +89,21 @@ const Hero = () => {
             </Button>
           </motion.div>
 
+          {/* Supporting Text */}
+          <motion.p 
+            className="text-lg text-white/90 mt-8 mb-6 max-w-2xl font-medium text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            Monthly starts with 3 base courses.
+            <br />
+            Annual unlocks everything instantly — including Homelab, Masterclass, and bonuses.
+          </motion.p>
+
           {/* Award badge */}
           <motion.div
-            className="mt-10 inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20 hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20 hover:scale-105 transition-transform duration-300"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
@@ -99,7 +111,7 @@ const Hero = () => {
             <div className="bg-kubecraft-terracotta/20 p-2 rounded-full">
               <span className="text-kubecraft-terracotta text-lg">🏆</span>
             </div>
-            <span className="text-sm font-medium text-white">Top 1% Skool Community Award</span>
+            <span className="text-sm font-medium text-white">700+ members | Top 1% Skool Community | Members at Big Tech</span>
           </motion.div>
         </div>
       </div>
