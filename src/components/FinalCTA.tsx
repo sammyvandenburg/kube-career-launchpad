@@ -42,23 +42,20 @@ const FinalCTA = () => {
         >
           <motion.div variants={itemVariants}>
             <h2 className="text-4xl md:text-6xl font-bold mb-8">
-              Ready to Transform Your DevOps Career?
+              Ready to Stop Guessing and Start Growing?
             </h2>
           </motion.div>
           
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto font-medium">
-              Join a proven system with expert coaching, hands-on courses, and a community that has your back 
-              whether you want to land your first DevOps job or scale to six figures and beyond.
-              <br className="hidden md:block mt-2" />
-              Stop figuring it out on your own. Your breakthrough is just one click away.
+              Join the only DevOps system built to get you hired — with real projects, referrals, and support from people who've done it.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants}>
             <div className="mb-10 p-5 bg-gray-900/20 rounded-xl backdrop-blur-sm">
               <p className="text-white text-lg md:text-xl font-medium">
-                <span className="font-bold">Annual Membership Bonus:</span> Sign up for an annual membership and get 5 months free.
+                Annual unlocks everything and saves you $699. This offer expires soon, lock in your spot now.
               </p>
             </div>
           </motion.div>
@@ -78,7 +75,7 @@ const FinalCTA = () => {
           <motion.div variants={itemVariants}>
             <div className="mt-8 p-4 bg-gray-900/20 max-w-md mx-auto rounded-xl backdrop-blur-sm">
               <p className="text-white/90">
-                <span className="font-bold">600+</span> members already joined — Secure your place now!
+                <span className="font-bold">700+</span> members already joined — Secure your place now!
               </p>
             </div>
           </motion.div>

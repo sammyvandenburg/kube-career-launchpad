@@ -36,11 +36,8 @@ const WhyJoinNow = () => {
                 <DollarSign className="h-7 w-7 text-kubecraft-green" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                DevOps salaries average <span className="text-kubecraft-green">$158,000/year</span>
+                <span className="text-2xl">🚀</span> DevOps roles are in demand <span className="text-kubecraft-green">across every major tech company</span>
               </h3>
-              <p className="text-gray-300">
-                One of the highest-paid tech specializations with growing demand globally.
-              </p>
             </div>
           </motion.div>
 
@@ -57,11 +54,8 @@ const WhyJoinNow = () => {
                 <Star className="h-7 w-7 text-kubecraft-terracotta" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Annual membership = <span className="text-kubecraft-terracotta">5 months free</span>
+                <span className="text-2xl">🔓</span> Annual unlocks everything — <span className="text-kubecraft-terracotta">save 40% vs monthly</span>
               </h3>
-              <p className="text-gray-300">
-                Get all content unlocked and save with our annual membership option.
-              </p>
             </div>
           </motion.div>
 
@@ -78,11 +72,8 @@ const WhyJoinNow = () => {
                 <Timer className="h-7 w-7 text-red-400" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Price increases <span className="text-red-400">soon</span>
+                <span className="text-2xl">⏳</span> Price increases to <span className="text-red-400">$999/year at 725 members</span>
               </h3>
-              <p className="text-gray-300">
-                Lock in today's price before our next scheduled price increase.
-              </p>
             </div>
           </motion.div>
         </div>

@@ -44,7 +44,7 @@ const WhyJoinWithGuarantee = () => {
           </p>
           
           <p className="text-lg mb-8 text-white">
-            When you join KubeCraft, you're not just buying a course. You're joining a community built for momentum, accountability, and real results.
+            You're not buying a course — you're joining a structured system to launch your career.
           </p>
           
           <h4 className="text-xl font-bold mb-4 mt-10 text-white">Here's our commitment to you:</h4>

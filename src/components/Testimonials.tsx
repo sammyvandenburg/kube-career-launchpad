@@ -62,13 +62,26 @@ const Testimonials = () => {
           </span>
         </motion.div>
 
+        {/* New intro line */}
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <p className="text-xl text-white font-medium max-w-3xl mx-auto">
+            Our members don't just learn skills — they build confidence, get interviews, and land real jobs across the globe.
+          </p>
+        </motion.div>
+
         {/* Featured quotes */}
         <motion.div 
           className="flex flex-wrap justify-center gap-8 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="bg-gray-900 shadow-md rounded-lg px-8 py-4 border-l-4 border-kubecraft-terracotta max-w-md">
             <p className="italic text-lg text-white">"I tripled my salary in 6 months thanks to KubeCraft."</p>
@@ -83,7 +96,7 @@ const Testimonials = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white">
             Our members don't just learn technical skills — <span className="text-kubecraft-green">they get:</span>

@@ -1,117 +1,86 @@
 
-import { Check, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const MischaStory = () => {
-  const painPoints = [
-    "Struggling to break into DevOps without experience?",
-    "Feeling lost in endless courses and tutorials?",
-    "Frustrated with advice that doesn't lead to real jobs?",
-    "Worrying your background isn't \"technical enough\"?",
-    "Unsure how to stand out to employers or recruiters?"
-  ];
-
   return (
-    <section className="section-padding py-24 bg-black">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Feeling Stuck in Your <span className="text-kubecraft-terracotta">DevOps Journey?</span>
-          </motion.h2>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-stretch gap-12">
-          {/* Left side - Pain points */}
-          <motion.div 
-            className="flex-1 space-y-5"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {painPoints.map((point, index) => (
-              <motion.div 
-                key={index}
-                className="flex items-start gap-4" 
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-              >
-                <div className="mt-1 bg-kubecraft-terracotta/20 p-2 rounded-full flex-shrink-0">
-                  <Check className="h-5 w-5 text-kubecraft-terracotta" />
-                </div>
-                <p className="text-lg text-gray-300">{point}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+    <section className="section-padding bg-gradient-to-b from-black to-gray-900 py-24">
+      <div className="container-custom max-w-6xl">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">
+            Feeling Lost Trying to Break into DevOps?
+          </h2>
           
-          {/* Right side - Solution */}
-          <motion.div 
-            className="flex-1"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="relative">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-kubecraft-terracotta/10 to-kubecraft-green/10 -z-10 blur-md"></div>
-              <div className="bg-gray-900/80 backdrop-blur-sm p-8 md:p-10 rounded-3xl shadow-xl border border-gray-800">
-                <p className="text-xl mb-6 text-white font-medium">
-                  Join KubeCraft and get hands-on guidance from someone who's been in your shoes.
-                </p>
-                
-                <p className="text-lg mb-8 text-gray-300">
-                  I went from a non-tech background to a 6-figure DevOps career in just 6 months — and now I help 600+ members do the same.
-                </p>
-                
-                <p className="text-lg font-semibold mb-4 text-white">
-                  Inside, you'll get:
-                </p>
-                
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-start gap-3">
-                    <div className="mt-1 bg-kubecraft-green/20 p-1.5 rounded-full">
-                      <Check className="h-4 w-4 text-kubecraft-green" />
-                    </div>
-                    <p className="text-gray-300">A proven, step-by-step roadmap</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="mt-1 bg-kubecraft-green/20 p-1.5 rounded-full">
-                      <Check className="h-4 w-4 text-kubecraft-green" />
-                    </div>
-                    <p className="text-gray-300">Practical experience through internships</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="mt-1 bg-kubecraft-green/20 p-1.5 rounded-full">
-                      <Check className="h-4 w-4 text-kubecraft-green" />
-                    </div>
-                    <p className="text-gray-300">A supportive network that helps you win</p>
-                  </div>
-                </div>
-                
-                <p className="text-lg font-bold mb-8 text-white italic">
-                  I learned the hard way so you don't have to.
-                </p>
-                
-                <Button 
-                  className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-lg px-8 py-6 rounded-xl shadow-md group hover:shadow-lg hover:scale-105 transition-all duration-300 w-full md:w-auto"
-                  onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
-                >
-                  <span>Join the KubeCraft Community</span>
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
-              </div>
+          <div className="max-w-3xl mx-auto text-left space-y-6 mb-12">
+            <div className="flex items-start gap-4">
+              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
+              <p className="text-lg text-white">Can't get hired without "real" experience?</p>
             </div>
-          </motion.div>
-        </div>
+            <div className="flex items-start gap-4">
+              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
+              <p className="text-lg text-white">Overwhelmed by endless tutorials with no results?</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
+              <p className="text-lg text-white">Sick of resume tips that don't get interviews?</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
+              <p className="text-lg text-white">Coming from a non-technical background?</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
+              <p className="text-lg text-white">Not sure how to stand out to recruiters or land referrals?</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="grid md:grid-cols-2 gap-12 items-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="text-center md:text-left">
+            <img 
+              src="/lovable-uploads/a08e8342-245a-426e-b160-769369df9644.png" 
+              alt="Mischa van den Burg - Founder" 
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto md:mx-0 mb-6 object-cover shadow-xl border-4 border-kubecraft-terracotta/20"
+            />
+            <h3 className="text-2xl font-bold mb-2 text-white">Mischa van den Burg</h3>
+            <p className="text-kubecraft-terracotta text-lg font-medium mb-4">Senior DevOps Engineer & KubeCraft Founder</p>
+          </div>
+          
+          <div className="space-y-6">
+            <p className="text-lg text-white leading-relaxed">
+              Five years ago, I was stuck in the same place you might be now. I had the passion for DevOps but lacked the practical experience employers wanted. The job market felt impossible to crack.
+            </p>
+            
+            <p className="text-lg text-white leading-relaxed">
+              That's when I realized the problem wasn't my skills — it was my approach. I needed real projects, mentorship, and most importantly, a community of people who'd already walked the path.
+            </p>
+            
+            <p className="text-lg text-white leading-relaxed">
+              Inside KubeCraft, you'll follow a clear learning journey — with hands-on labs, career guidance, and community support designed to get you hired faster.
+            </p>
+            
+            <p className="text-lg text-white leading-relaxed">
+              Today, I work as a Senior DevOps Engineer, and I've helped hundreds of members break into DevOps — from complete beginners to career switchers landing six-figure roles at top companies.
+            </p>
+            
+            <div className="bg-gray-800 p-6 rounded-xl border-l-4 border-kubecraft-green">
+              <p className="text-lg text-white italic">
+                "KubeCraft isn't just another course platform. It's the career transformation system I wish I had when I was starting out."
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
