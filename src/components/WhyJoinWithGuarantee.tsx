@@ -40,11 +40,11 @@ const WhyJoinWithGuarantee = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg mb-6 text-white">
-            We're committed to helping you break into and thrive in DevOps, and success works best when we both bring our best.
+            You are not buying a course. You are joining a step-by-step system to get hired.
           </p>
           
           <p className="text-lg mb-8 text-white">
-            You're not buying a course — you're joining a structured system to launch your career.
+            No contracts. Cancel anytime. Real projects. Live mentorship. A network that helps you win.
           </p>
           
           <h4 className="text-xl font-bold mb-4 mt-10 text-white">Here's our commitment to you:</h4>

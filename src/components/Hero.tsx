@@ -31,8 +31,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            DevOps roles are booming, but landing one without experience can feel <span className="text-kubecraft-terracotta">overwhelming</span>.
-            <br className="hidden md:block" /> When you're surrounded by people who've already done it, <span className="text-kubecraft-green">everything changes</span>.
+            DevOps roles are booming, but breaking in without experience is tough.
+            <br className="hidden md:block" /> Surround yourself with experts who have done it before you.
           </motion.p>
 
           <motion.div 
@@ -42,10 +42,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
-              "Build real projects in production-grade labs",
+              "Build real projects in production labs",
               "Get referred by senior engineers",
-              "Weekly live coaching calls and instant feedback",
-              "Access 600+ member LinkedIn profiles to grow your network"
+              "Weekly coaching and feedback",
+              "Access 600+ member LinkedIn profiles"
             ].map((item, i) => (
               <motion.div 
                 key={i}

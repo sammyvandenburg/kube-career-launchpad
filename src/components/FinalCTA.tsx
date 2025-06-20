@@ -48,7 +48,7 @@ const FinalCTA = () => {
           
           <motion.div variants={itemVariants}>
             <p className="text-lg md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto font-medium">
-              Join the only DevOps system built to get you hired — with real projects, referrals, and support from people who've done it.
+              Join the only DevOps system built to get you hired. Real labs, referrals, and expert support from engineers who have done it.
             </p>
           </motion.div>
 

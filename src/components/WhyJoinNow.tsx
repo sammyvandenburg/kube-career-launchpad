@@ -17,9 +17,6 @@ const WhyJoinNow = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             Why Join <span className="text-kubecraft-terracotta">Now</span>
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Don't wait to start your DevOps journey - here's why now is the perfect time.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -36,7 +33,7 @@ const WhyJoinNow = () => {
                 <DollarSign className="h-7 w-7 text-kubecraft-green" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">🚀</span> DevOps roles are in demand <span className="text-kubecraft-green">across every major tech company</span>
+                <span className="text-2xl">🚀</span> DevOps roles are in demand across every major tech company
               </h3>
             </div>
           </motion.div>
@@ -54,7 +51,7 @@ const WhyJoinNow = () => {
                 <Star className="h-7 w-7 text-kubecraft-terracotta" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">🔓</span> Annual unlocks everything — <span className="text-kubecraft-terracotta">save 40% vs monthly</span>
+                <span className="text-2xl">🔓</span> Annual unlocks everything and saves 40 percent vs monthly
               </h3>
             </div>
           </motion.div>
@@ -72,7 +69,7 @@ const WhyJoinNow = () => {
                 <Timer className="h-7 w-7 text-red-400" />
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">⏳</span> Price increases to <span className="text-red-400">$999/year at 725 members</span>
+                <span className="text-2xl">⏳</span> Price increases to 999 per year at 725 members
               </h3>
             </div>
           </motion.div>

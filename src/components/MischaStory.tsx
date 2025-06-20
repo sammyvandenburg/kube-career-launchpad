@@ -19,23 +19,19 @@ const MischaStory = () => {
           <div className="max-w-3xl mx-auto text-left space-y-6 mb-12">
             <div className="flex items-start gap-4">
               <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-lg text-white">Can't get hired without "real" experience?</p>
+              <p className="text-lg text-white">No experience, no interviews</p>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-lg text-white">Overwhelmed by endless tutorials with no results?</p>
+              <p className="text-lg text-white">Tutorials give you no traction</p>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-lg text-white">Sick of resume tips that don't get interviews?</p>
+              <p className="text-lg text-white">Unsure how to stand out or get referred</p>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-lg text-white">Coming from a non-technical background?</p>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 bg-kubecraft-terracotta rounded-full mt-3 flex-shrink-0"></div>
-              <p className="text-lg text-white">Not sure how to stand out to recruiters or land referrals?</p>
+              <p className="text-lg text-white">Coming from a non-tech background?</p>
             </div>
           </div>
         </motion.div>
@@ -59,19 +55,11 @@ const MischaStory = () => {
           
           <div className="space-y-6">
             <p className="text-lg text-white leading-relaxed">
-              Five years ago, I was stuck in the same place you might be now. I had the passion for DevOps but lacked the practical experience employers wanted. The job market felt impossible to crack.
+              Five years ago, I struggled to break into DevOps. I had the drive but lacked experience and direction. The game-changer was getting real projects, mentorship, and a strong network.
             </p>
             
             <p className="text-lg text-white leading-relaxed">
-              That's when I realized the problem wasn't my skills — it was my approach. I needed real projects, mentorship, and most importantly, a community of people who'd already walked the path.
-            </p>
-            
-            <p className="text-lg text-white leading-relaxed">
-              Inside KubeCraft, you'll follow a clear learning journey — with hands-on labs, career guidance, and community support designed to get you hired faster.
-            </p>
-            
-            <p className="text-lg text-white leading-relaxed">
-              Today, I work as a Senior DevOps Engineer, and I've helped hundreds of members break into DevOps — from complete beginners to career switchers landing six-figure roles at top companies.
+              Today I'm a Senior DevOps Engineer helping 700+ members land jobs across the world. KubeCraft is the system I wish I had — real labs, referrals, and expert support.
             </p>
             
             <div className="bg-gray-800 p-6 rounded-xl border-l-4 border-kubecraft-green">
