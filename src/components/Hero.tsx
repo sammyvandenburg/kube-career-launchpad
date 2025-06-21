@@ -22,7 +22,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            The DevOps Community Trusted by Engineers at <span className="text-kubecraft-terracotta">Google, Microsoft</span> & <span className="text-kubecraft-green">NVIDIA</span>
+            DevOps Jobs Are Booming. <span className="text-kubecraft-terracotta">Breaking In Without Experience Is Brutal</span>
           </motion.h1>
           
           <motion.p 
@@ -31,8 +31,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            DevOps roles are booming, but breaking in without experience is tough.
-            <br className="hidden md:block" /> Surround yourself with experts who have done it before you.
+            Surround yourself with expert engineers. Get real projects, referrals, and coaching inside KubeCraft.
+            <br className="hidden md:block" /> It is the system built to get you hired.
           </motion.p>
 
           <motion.div 
@@ -42,10 +42,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
-              "Build real projects in production labs",
+              "Build production-ready projects",
               "Get referred by senior engineers",
-              "Weekly coaching and feedback",
-              "Access 600+ member LinkedIn profiles"
+              "Weekly live coaching and feedback",
+              "Access 600+ LinkedIn-ready peer profiles"
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -75,7 +75,7 @@ const Hero = () => {
               className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-lg px-8 py-6 rounded-xl shadow-lg flex items-center gap-2 group transition-all duration-300 hover:shadow-xl hover:scale-105"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
-              <span>Join KubeCraft Today</span>
+              <span>Join KubeCraft Now</span>
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -84,26 +84,14 @@ const Hero = () => {
               className="text-lg border-2 border-white text-white bg-transparent hover:bg-white hover:text-black px-8 py-6 rounded-xl transition-all duration-300"
               onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <span>See Member Stories</span>
+              <span>See Real Member Stories</span>
               <ChevronDown className="ml-1 h-5 w-5" />
             </Button>
           </motion.div>
 
-          {/* Supporting Text */}
-          <motion.p 
-            className="text-lg text-white/90 mt-8 mb-6 max-w-2xl font-medium text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            Monthly starts with 3 base courses.
-            <br />
-            Annual unlocks everything instantly — including Homelab, Masterclass, and bonuses.
-          </motion.p>
-
           {/* Award badge */}
           <motion.div
-            className="inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20 hover:scale-105 transition-transform duration-300"
+            className="inline-flex items-center gap-2 p-3 pl-1 pr-4 bg-white/10 backdrop-blur-sm rounded-full shadow-md border border-white/20 hover:scale-105 transition-transform duration-300 mt-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
@@ -111,7 +99,7 @@ const Hero = () => {
             <div className="bg-kubecraft-terracotta/20 p-2 rounded-full">
               <span className="text-kubecraft-terracotta text-lg">🏆</span>
             </div>
-            <span className="text-sm font-medium text-white">700+ members | Top 1% Skool Community | Members at Big Tech</span>
+            <span className="text-sm font-medium text-white">700+ Members | Top 1% Skool Community | Members at Google, Microsoft, NVIDIA</span>
           </motion.div>
         </div>
       </div>

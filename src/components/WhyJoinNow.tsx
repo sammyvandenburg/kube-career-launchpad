@@ -30,10 +30,10 @@ const WhyJoinNow = () => {
           >
             <div className="flex flex-col h-full">
               <div className="mb-6 bg-kubecraft-green/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                <DollarSign className="h-7 w-7 text-kubecraft-green" />
+                <span className="text-2xl">🚀</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">🚀</span> DevOps roles are in demand across every major tech company
+                DevOps roles are in demand at every major tech company
               </h3>
             </div>
           </motion.div>
@@ -48,10 +48,10 @@ const WhyJoinNow = () => {
           >
             <div className="flex flex-col h-full">
               <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                <Star className="h-7 w-7 text-kubecraft-terracotta" />
+                <span className="text-2xl">🔓</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">🔓</span> Annual unlocks everything and saves 40 percent vs monthly
+                Annual unlock gives full access and saves 40% compared to monthly
               </h3>
             </div>
           </motion.div>
@@ -66,10 +66,10 @@ const WhyJoinNow = () => {
           >
             <div className="flex flex-col h-full">
               <div className="mb-6 bg-red-100/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                <Timer className="h-7 w-7 text-red-400" />
+                <span className="text-2xl">⏳</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                <span className="text-2xl">⏳</span> Price increases to 999 per year at 725 members
+                Price increases to $999/year when we reach 725 members
               </h3>
             </div>
           </motion.div>

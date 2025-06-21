@@ -55,7 +55,7 @@ const FinalCTA = () => {
           <motion.div variants={itemVariants}>
             <div className="mb-10 p-5 bg-gray-900/20 rounded-xl backdrop-blur-sm">
               <p className="text-white text-lg md:text-xl font-medium">
-                Annual unlocks everything and saves you $699. This offer expires soon, lock in your spot now.
+                More than 700 members already joined. Secure your place before the price increases.
               </p>
             </div>
           </motion.div>
@@ -67,17 +67,9 @@ const FinalCTA = () => {
               className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
-              <span>Join KubeCraft Today</span>
+              <span>Join KubeCraft Now</span>
               <ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
-          </motion.div>
-          
-          <motion.div variants={itemVariants}>
-            <div className="mt-8 p-4 bg-gray-900/20 max-w-md mx-auto rounded-xl backdrop-blur-sm">
-              <p className="text-white/90">
-                <span className="font-bold">700+</span> members already joined — Secure your place now!
-              </p>
-            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -32,12 +32,12 @@ const annualUnlocks = [
     color: "green"
   },
   {
-    title: "Interview Prep",
+    title: "Interview Preparation",
     icon: Calendar,
     color: "pink"
   },
   {
-    title: "Branding and Notetaking",
+    title: "Personal Branding and Notetaking",
     icon: Users,
     color: "blue"
   },
@@ -47,7 +47,7 @@ const annualUnlocks = [
     color: "purple"
   },
   {
-    title: "Workshop Library",
+    title: "Workshop Library (Live Replays)",
     icon: MessageSquare,
     color: "amber"
   }
@@ -94,11 +94,11 @@ const WhatYouGet = () => {
             What You Unlock Inside <span className="text-kubecraft-terracotta">(Worth €8,000+)</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Everything you need to get job-ready in DevOps. Real projects, expert guidance, and a clear path. No fluff. No bootcamp price tag.
+            Everything you need to get job ready. No fluff. No bootcamp price tag.
           </p>
         </motion.div>
 
-        {/* Starter Courses */}
+        {/* Monthly Plan */}
         <motion.div 
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -107,7 +107,7 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">
-            Monthly <span className="text-kubecraft-green">(Starter Courses)</span>
+            Monthly Plan <span className="text-kubecraft-green">Includes</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {starterCourses.map((feature, index) => (
@@ -143,7 +143,7 @@ const WhatYouGet = () => {
           </div>
         </motion.div>
 
-        {/* Annual Unlocks */}
+        {/* Annual Plan */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">
-            Annual <span className="text-kubecraft-terracotta">(or via credits)</span>
+            Annual Plan <span className="text-kubecraft-terracotta">(or unlock via credits)</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {annualUnlocks.map((feature, index) => (

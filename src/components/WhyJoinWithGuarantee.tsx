@@ -39,22 +39,17 @@ const WhyJoinWithGuarantee = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg mb-6 text-white">
-            You are not buying a course. You are joining a step-by-step system to get hired.
-          </p>
-          
           <p className="text-lg mb-8 text-white">
-            No contracts. Cancel anytime. Real projects. Live mentorship. A network that helps you win.
+            You are not buying a course. You are joining a step by step system to get hired.
           </p>
           
-          <h4 className="text-xl font-bold mb-4 mt-10 text-white">Here's our commitment to you:</h4>
           <ul className="mb-8 space-y-4">
             <li className="flex items-start gap-3">
               <div className="mt-1 flex-shrink-0">
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">No long-term contracts</span> 
+                <span className="font-bold text-lg text-white">No long term contracts</span> 
                 <span className="text-lg text-gray-300"> - Stay because you're growing, not because you're forced to.</span>
               </div>
             </li>
@@ -63,15 +58,32 @@ const WhyJoinWithGuarantee = () => {
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">Simple, no-hassle cancellation</span>
+                <span className="font-bold text-lg text-white">Cancel anytime with no hassle</span>
                 <span className="text-lg text-gray-300"> - If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-5 w-5 text-kubecraft-green" />
+              </div>
+              <div>
+                <span className="font-bold text-lg text-white">Live mentorship and real projects</span>
+                <span className="text-lg text-gray-300"> - Get hands-on experience and direct support from industry experts.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="mt-1 flex-shrink-0">
+                <Check className="h-5 w-5 text-kubecraft-green" />
+              </div>
+              <div>
+                <span className="font-bold text-lg text-white">100% satisfaction guaranteed</span>
+                <span className="text-lg text-gray-300"> - We're committed to your success and satisfaction.</span>
               </div>
             </li>
           </ul>
           
-          <p className="text-xl font-bold mt-8 mb-2 text-white">The only real risk is staying stuck and not betting on yourself.</p>
-          <p className="text-lg mb-10 text-white">
-            Come ready to engage. Join the live sessions, tap into mentorship, and apply the hands-on training. That's where the transformation happens.
+          <p className="text-xl font-bold mt-8 text-white">
+            The only real risk is staying stuck and not betting on yourself.
           </p>
         </motion.div>
       </div>

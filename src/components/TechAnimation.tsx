@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const technologies = [
@@ -22,7 +23,7 @@ const TechAnimation = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Learn the tools top engineers use daily
+            Learn the Tools Top DevOps Engineers Use Daily
           </h2>
         </motion.div>
 
