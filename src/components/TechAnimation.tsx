@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const technologies = [
@@ -25,10 +24,25 @@ const TechAnimation = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
             Learn the Tools Top DevOps Engineers Use Daily
           </h2>
+          
+          {/* Technology Stack in two rows */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="flex justify-center items-center gap-8 mb-4 flex-wrap">
+              <span className="text-2xl">⚙️ Kubernetes</span>
+              <span className="text-2xl">☁️ Azure</span>
+              <span className="text-2xl">🐧 Linux</span>
+              <span className="text-2xl">🏔️ Arch</span>
+            </div>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              <span className="text-2xl">🐳 Docker</span>
+              <span className="text-2xl">🐍 Python</span>
+              <span className="text-2xl">📝 Git</span>
+              <span className="text-2xl bg-kubecraft-terracotta rounded-full px-4 py-2 text-white font-bold">DevOps</span>
+            </div>
+          </div>
         </motion.div>
 
         <div className="relative h-96 flex items-center justify-center">
-          {/* Central hub */}
           <motion.div 
             className="absolute z-10 w-20 h-20 bg-kubecraft-terracotta rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg"
             animate={{ rotate: 360 }}
@@ -37,7 +51,6 @@ const TechAnimation = () => {
             DevOps
           </motion.div>
 
-          {/* Orbiting technologies */}
           {technologies.map((tech, index) => {
             const angle = (index * 360) / technologies.length;
             const radius = 140;
@@ -75,7 +88,6 @@ const TechAnimation = () => {
             );
           })}
 
-          {/* Orbit rings */}
           <div className="orbit w-72 h-72 opacity-20"></div>
           <div className="orbit w-96 h-96 opacity-10"></div>
         </div>

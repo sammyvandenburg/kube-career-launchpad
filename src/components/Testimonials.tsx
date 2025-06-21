@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     name: "Joe Sabbagh",
-    role: "Cloud Engineer",
+    role: "Cloud Engineer", 
     content: "After almost a year of solo learning, I landed a remote DevOps job thanks to KubeCraft",
     avatar: "https://randomuser.me/api/portraits/men/43.jpg"
   },
@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     name: "Boris Levenzon",
-    role: "Sr. Infrastructure Engineer",
+    role: "Senior Infrastructure Engineer",
     content: "The Q and A sessions and mentorship here are unmatched",
     avatar: "https://randomuser.me/api/portraits/men/72.jpg"
   }
@@ -74,8 +74,7 @@ const Testimonials = () => {
                     className="w-14 h-14 rounded-full object-cover border-2 border-kubecraft-terracotta/20"
                   />
                   <div>
-                    <h4 className="font-bold text-lg text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-300">{testimonial.role}</p>
+                    <h4 className="font-bold text-lg text-white">{testimonial.name}, {testimonial.role}</h4>
                   </div>
                 </div>
               </div>

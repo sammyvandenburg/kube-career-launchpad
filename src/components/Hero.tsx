@@ -1,4 +1,3 @@
-
 import { ArrowRight, ChevronDown, Award, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -32,7 +31,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Surround yourself with expert engineers. Get real projects, referrals, and coaching inside KubeCraft.
-            <br className="hidden md:block" /> It is the system built to get you hired.
+            <br className="hidden md:block" /> The system designed to get you hired.
           </motion.p>
 
           <motion.div 

@@ -54,8 +54,11 @@ const FinalCTA = () => {
 
           <motion.div variants={itemVariants}>
             <div className="mb-10 p-5 bg-gray-900/20 rounded-xl backdrop-blur-sm">
-              <p className="text-white text-lg md:text-xl font-medium">
+              <p className="text-white text-lg md:text-xl font-medium mb-2">
                 More than 700 members already joined. Secure your place before the price increases.
+              </p>
+              <p className="text-white text-lg md:text-xl font-medium">
+                New members join every week. Don't miss your window to join before we cross 725.
               </p>
             </div>
           </motion.div>

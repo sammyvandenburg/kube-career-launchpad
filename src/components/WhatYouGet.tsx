@@ -1,87 +1,25 @@
 
-import { ShieldCheck, Award, Users, BookOpen, Calendar, MessageSquare } from "lucide-react";
+import { Check, Star, Zap, Users, BookOpen, Code, Target } from "lucide-react";
 import { motion } from "framer-motion";
 
-const starterCourses = [
-  {
-    title: "Linux and Terminal",
-    icon: BookOpen,
-    color: "blue"
-  },
-  {
-    title: "Kubernetes Fundamentals",
-    icon: ShieldCheck,
-    color: "purple"
-  },
-  {
-    title: "CV and LinkedIn Blueprint",
-    icon: MessageSquare,
-    color: "teal"
-  }
-];
-
-const annualUnlocks = [
-  {
-    title: "Kubernetes Homelab",
-    icon: Award,
-    color: "amber"
-  },
-  {
-    title: "DevOps Masterclass",
-    icon: BookOpen,
-    color: "green"
-  },
-  {
-    title: "Interview Preparation",
-    icon: Calendar,
-    color: "pink"
-  },
-  {
-    title: "Personal Branding and Notetaking",
-    icon: Users,
-    color: "blue"
-  },
-  {
-    title: "Internship Track",
-    icon: Award,
-    color: "purple"
-  },
-  {
-    title: "Workshop Library (Live Replays)",
-    icon: MessageSquare,
-    color: "amber"
-  }
-];
-
-const getGradient = (color: string) => {
-  const gradients = {
-    blue: "from-kubecraft-terracotta/10 to-kubecraft-green/5",
-    purple: "from-kubecraft-green/10 to-kubecraft-terracotta/5",
-    amber: "from-kubecraft-terracotta/10 to-kubecraft-green/5",
-    green: "from-kubecraft-green/10 to-kubecraft-terracotta/5",
-    pink: "from-kubecraft-terracotta/10 to-kubecraft-green/5",
-    teal: "from-kubecraft-green/10 to-kubecraft-terracotta/5"
-  };
-  
-  return gradients[color as keyof typeof gradients] || gradients.blue;
-};
-
-const getIconColor = (color: string) => {
-  const colors = {
-    blue: "text-kubecraft-terracotta",
-    purple: "text-kubecraft-green",
-    amber: "text-kubecraft-terracotta",
-    green: "text-kubecraft-green",
-    pink: "text-kubecraft-terracotta",
-    teal: "text-kubecraft-green"
-  };
-  
-  return colors[color as keyof typeof colors] || colors.blue;
-};
-
 const WhatYouGet = () => {
+  const monthlyFeatures = [
+    { icon: <Code className="h-5 w-5" />, title: "Linux and Terminal", description: "" },
+    { icon: <Target className="h-5 w-5" />, title: "Kubernetes Fundamentals", description: "" },
+    { icon: <Users className="h-5 w-5" />, title: "CV and LinkedIn Blueprint", description: "" }
+  ];
+
+  const annualFeatures = [
+    { icon: <Zap className="h-5 w-5" />, title: "Kubernetes Homelab", description: "" },
+    { icon: <Star className="h-5 w-5" />, title: "DevOps Masterclass", description: "" },
+    { icon: <Target className="h-5 w-5" />, title: "Interview Preparation", description: "" },
+    { icon: <Users className="h-5 w-5" />, title: "Personal Branding and Notetaking", description: "" },
+    { icon: <BookOpen className="h-5 w-5" />, title: "Internship Track", description: "" },
+    { icon: <Code className="h-5 w-5" />, title: "Workshop Library with live session recordings and bonus deep dives", description: "" }
+  ];
+
   return (
-    <section className="section-padding bg-black py-24">
+    <section className="section-padding bg-gradient-to-b from-gray-900 to-black py-24">
       <div className="container-custom max-w-6xl">
         <motion.div 
           className="text-center mb-16"
@@ -90,102 +28,73 @@ const WhatYouGet = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-            What You Unlock Inside <span className="text-kubecraft-terracotta">(Worth €8,000+)</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            What You Unlock Inside (Worth €8000+)
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
             Everything you need to get job ready. No fluff. No bootcamp price tag.
           </p>
         </motion.div>
 
-        {/* Monthly Plan */}
-        <motion.div 
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">
-            Monthly Plan <span className="text-kubecraft-green">Includes</span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {starterCourses.map((feature, index) => (
-              <motion.div 
-                key={index} 
-                className="group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <motion.div 
-                  className="bg-gray-900 rounded-xl p-8 h-full border border-gray-800 overflow-hidden relative transition-all duration-500 hover:shadow-xl"
-                  whileHover={{ 
-                    y: -8,
-                    transition: { duration: 0.3 }
-                  }}
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${getGradient(feature.color)} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className={`p-4 rounded-full inline-flex items-center justify-center bg-gray-800 shadow-md mb-6 ${getIconColor(feature.color)}`}>
-                      <feature.icon className="h-8 w-8" />
-                    </div>
-                    
-                    <h3 className="font-bold text-2xl mb-3 text-white group-hover:text-kubecraft-terracotta transition-colors duration-300">{feature.title}</h3>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Monthly Plan */}
+          <motion.div 
+            className="bg-gray-800 rounded-2xl p-8 border border-gray-700 shadow-lg"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Monthly Plan Includes</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {monthlyFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
+                  <div className="text-kubecraft-green mt-1">
+                    {feature.icon}
                   </div>
-                  
-                  <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-gray-900/0 to-gray-800/30 rounded-tl-[40px] group-hover:to-gray-700/50 transition-colors duration-500"></div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                  <div>
+                    <h4 className="font-semibold text-white">{feature.title}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
-        {/* Annual Plan */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">
-            Annual Plan <span className="text-kubecraft-terracotta">(or unlock via credits)</span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {annualUnlocks.map((feature, index) => (
-              <motion.div 
-                key={index} 
-                className="group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <motion.div 
-                  className="bg-gray-900 rounded-xl p-8 h-full border border-gray-800 overflow-hidden relative transition-all duration-500 hover:shadow-xl"
-                  whileHover={{ 
-                    y: -8,
-                    transition: { duration: 0.3 }
-                  }}
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${getGradient(feature.color)} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className={`p-4 rounded-full inline-flex items-center justify-center bg-gray-800 shadow-md mb-6 ${getIconColor(feature.color)}`}>
-                      <feature.icon className="h-8 w-8" />
-                    </div>
-                    
-                    <h3 className="font-bold text-2xl mb-3 text-white group-hover:text-kubecraft-terracotta transition-colors duration-300">{feature.title}</h3>
+          {/* Annual Plan */}
+          <motion.div 
+            className="bg-gradient-to-br from-kubecraft-terracotta/10 to-kubecraft-green/10 rounded-2xl p-8 border border-kubecraft-terracotta/30 shadow-lg relative"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-kubecraft-terracotta text-white px-4 py-2 rounded-full text-sm font-bold">
+                Best Value
+              </span>
+            </div>
+            
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-2">Annual Plan (or unlock via credits)</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {annualFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
+                  <div className="text-kubecraft-terracotta mt-1">
+                    {feature.icon}
                   </div>
-                  
-                  <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-gray-900/0 to-gray-800/30 rounded-tl-[40px] group-hover:to-gray-700/50 transition-colors duration-500"></div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                  <div>
+                    <h4 className="font-semibold text-white">{feature.title}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

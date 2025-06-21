@@ -49,8 +49,8 @@ const WhyJoinWithGuarantee = () => {
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">No long term contracts</span> 
-                <span className="text-lg text-gray-300"> - Stay because you're growing, not because you're forced to.</span>
+                <span className="font-bold text-lg text-white">No long term contracts.</span> 
+                <span className="text-lg text-gray-300"> Stay because you're growing, not because you're forced to.</span>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -58,8 +58,8 @@ const WhyJoinWithGuarantee = () => {
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">Cancel anytime with no hassle</span>
-                <span className="text-lg text-gray-300"> - If KubeCraft isn't the right fit, you can cancel anytime before your next billing cycle.</span>
+                <span className="font-bold text-lg text-white">Cancel anytime with no hassle.</span>
+                <span className="text-lg text-gray-300"> If KubeCraft isn't the right fit, cancel before your next billing cycle.</span>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -67,8 +67,8 @@ const WhyJoinWithGuarantee = () => {
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">Live mentorship and real projects</span>
-                <span className="text-lg text-gray-300"> - Get hands-on experience and direct support from industry experts.</span>
+                <span className="font-bold text-lg text-white">Live mentorship and real projects.</span>
+                <span className="text-lg text-gray-300"> Get hands-on experience and direct support from industry experts.</span>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -76,8 +76,8 @@ const WhyJoinWithGuarantee = () => {
                 <Check className="h-5 w-5 text-kubecraft-green" />
               </div>
               <div>
-                <span className="font-bold text-lg text-white">100% satisfaction guaranteed</span>
-                <span className="text-lg text-gray-300"> - We're committed to your success and satisfaction.</span>
+                <span className="font-bold text-lg text-white">100 percent satisfaction guaranteed.</span>
+                <span className="text-lg text-gray-300"> We're committed to your success and satisfaction.</span>
               </div>
             </li>
           </ul>
