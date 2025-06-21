@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const technologies = [
@@ -31,13 +32,12 @@ const TechAnimation = () => {
               <span className="text-2xl">⚙️ Kubernetes</span>
               <span className="text-2xl">☁️ Azure</span>
               <span className="text-2xl">🐧 Linux</span>
-              <span className="text-2xl">🏔️ Arch</span>
+              <span className="text-2xl">🏔️ Arch Linux</span>
             </div>
             <div className="flex justify-center items-center gap-8 flex-wrap">
               <span className="text-2xl">🐳 Docker</span>
               <span className="text-2xl">🐍 Python</span>
               <span className="text-2xl">📝 Git</span>
-              <span className="text-2xl bg-kubecraft-terracotta rounded-full px-4 py-2 text-white font-bold">DevOps</span>
             </div>
           </div>
         </motion.div>
