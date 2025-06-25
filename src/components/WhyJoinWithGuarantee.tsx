@@ -69,7 +69,7 @@ const WhyJoinWithGuarantee = () => {
             <h3 className="text-2xl font-bold mb-4 text-white">
               What Makes KubeCraft Different
             </h3>
-          </div>
+          </motion.div>
           
           <div className="flex items-start gap-3 mb-8">
             <div className="mt-1 flex-shrink-0">
