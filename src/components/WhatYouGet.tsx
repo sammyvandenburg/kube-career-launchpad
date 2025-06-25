@@ -1,21 +1,21 @@
 
-import { Check, Star, Zap, Users, BookOpen, Code, Target } from "lucide-react";
+import { Check, Star, Zap, Users, BookOpen, Code, Target, Terminal, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhatYouGet = () => {
   const monthlyFeatures = [
-    { icon: <Code className="h-5 w-5" />, title: "Linux and Terminal", description: "" },
+    { icon: <Terminal className="h-5 w-5" />, title: "Linux & Terminal Essentials", description: "" },
     { icon: <Target className="h-5 w-5" />, title: "Kubernetes Fundamentals", description: "" },
-    { icon: <Users className="h-5 w-5" />, title: "CV and LinkedIn Blueprint", description: "" }
+    { icon: <Briefcase className="h-5 w-5" />, title: "Internship Program", description: "" }
   ];
 
   const annualFeatures = [
-    { icon: <Zap className="h-5 w-5" />, title: "Kubernetes Homelab", description: "" },
-    { icon: <Star className="h-5 w-5" />, title: "DevOps Masterclass", description: "" },
-    { icon: <Target className="h-5 w-5" />, title: "Interview Preparation", description: "" },
-    { icon: <Users className="h-5 w-5" />, title: "Personal Branding and Notetaking", description: "" },
-    { icon: <BookOpen className="h-5 w-5" />, title: "Internship Track", description: "" },
-    { icon: <Code className="h-5 w-5" />, title: "Workshop Library with live session recordings and bonus deep dives", description: "" }
+    { icon: <Zap className="h-5 w-5" />, title: "Kubernetes Homelab (Beginner & Advanced)", description: "" },
+    { icon: <Star className="h-5 w-5" />, title: "DevOps Masterclass (CI/CD & Automation)", description: "" },
+    { icon: <Users className="h-5 w-5" />, title: "CV & LinkedIn Blueprint (Stand out, get noticed)", description: "" },
+    { icon: <Target className="h-5 w-5" />, title: "Interview & Salary Preparation", description: "" },
+    { icon: <BookOpen className="h-5 w-5" />, title: "Personal Branding & Note-Taking System", description: "" },
+    { icon: <Code className="h-5 w-5" />, title: "Workshop Library & Live Recordings", description: "" }
   ];
 
   return (
@@ -29,10 +29,10 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            What You Unlock Inside (Worth €8000+)
+            What You Get Inside (Worth €8000+)
           </h2>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Everything you need to get job ready. No fluff. No bootcamp price tag.
+            Everything you need to get hired in DevOps. No fluff. No overpriced bootcamp.
           </p>
         </motion.div>
 
@@ -53,7 +53,7 @@ const WhatYouGet = () => {
               {monthlyFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
                   <div className="text-kubecraft-green mt-1">
-                    {feature.icon}
+                    <Check className="h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">{feature.title}</h4>
@@ -78,14 +78,14 @@ const WhatYouGet = () => {
             </div>
             
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-2">Annual Plan (or unlock via credits)</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Annual Plan (Best Value, or unlock via credits)</h3>
             </div>
             
             <div className="space-y-4">
               {annualFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
                   <div className="text-kubecraft-terracotta mt-1">
-                    {feature.icon}
+                    <Check className="h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">{feature.title}</h4>
