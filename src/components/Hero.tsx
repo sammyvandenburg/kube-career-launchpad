@@ -54,8 +54,8 @@ const Hero = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 + (i * 0.1) }}
               >
-                <div className="mt-1 bg-green-100 p-1.5 rounded-full">
-                  <Check className="h-4 w-4 text-green-600" />
+                <div className="mt-1 bg-kubecraft-green/20 p-1.5 rounded-full">
+                  <Check className="h-4 w-4 text-kubecraft-green" />
                 </div>
                 <p className="text-lg text-white/95 font-medium">
                   {item}

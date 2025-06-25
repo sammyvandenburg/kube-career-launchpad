@@ -88,7 +88,7 @@ const WhatYouGet = () => {
             <div className="space-y-4">
               {annualFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
-                  <div className="text-kubecraft-terracotta mt-1">
+                  <div className={`mt-1 ${index % 2 === 0 ? 'text-kubecraft-terracotta' : 'text-kubecraft-green'}`}>
                     <Check className="h-5 w-5" />
                   </div>
                   <div>

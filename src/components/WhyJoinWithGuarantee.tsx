@@ -32,7 +32,7 @@ const WhyJoinWithGuarantee = () => {
           <ul className="mb-8 space-y-4">
             <li className="flex items-start gap-3">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-kubecraft-green" />
+                <Check className="h-5 w-5 text-kubecraft-terracotta" />
               </div>
               <div>
                 <span className="font-bold text-lg text-white">No long term contracts.</span> 
@@ -50,7 +50,7 @@ const WhyJoinWithGuarantee = () => {
             </li>
             <li className="flex items-start gap-3">
               <div className="mt-1 flex-shrink-0">
-                <Check className="h-5 w-5 text-kubecraft-green" />
+                <Check className="h-5 w-5 text-kubecraft-terracotta" />
               </div>
               <div>
                 <span className="font-bold text-lg text-white">Live mentorship and real projects.</span>
@@ -69,7 +69,7 @@ const WhyJoinWithGuarantee = () => {
             <h3 className="text-2xl font-bold mb-4 text-white">
               What Makes KubeCraft Different
             </h3>
-          </motion.div>
+          </div>
           
           <div className="flex items-start gap-3 mb-8">
             <div className="mt-1 flex-shrink-0">

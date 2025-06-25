@@ -15,7 +15,7 @@ const WhyJoinNow = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-            Why Join <span className="text-kubecraft-terracotta">Now</span>
+            Why Join <span className="text-kubecraft-green">Now</span>
           </h2>
         </motion.div>
 
@@ -29,7 +29,7 @@ const WhyJoinNow = () => {
             whileHover={{ y: -5 }}
           >
             <div className="flex flex-col h-full">
-              <div className="mb-6 bg-kubecraft-green/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+              <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
                 <span className="text-2xl">🚀</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
@@ -47,7 +47,7 @@ const WhyJoinNow = () => {
             whileHover={{ y: -5 }}
           >
             <div className="flex flex-col h-full">
-              <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+              <div className="mb-6 bg-kubecraft-green/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
@@ -65,7 +65,7 @@ const WhyJoinNow = () => {
             whileHover={{ y: -5 }}
           >
             <div className="flex flex-col h-full">
-              <div className="mb-6 bg-kubecraft-green/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+              <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
                 <span className="text-2xl">🤝</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">

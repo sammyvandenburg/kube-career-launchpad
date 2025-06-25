@@ -7,37 +7,43 @@ const featuresList = [
     title: "DevOps Masterclass",
     description: "50+ hours of hands-on training with real-world projects and expert guidance",
     icon: BookOpen,
-    highlight: true
+    highlight: true,
+    color: "kubecraft-terracotta"
   },
   {
     title: "Enterprise Azure Lab",
     description: "Real production environment access for hands-on experience",
     icon: ShieldCheck,
-    highlight: false
+    highlight: false,
+    color: "kubecraft-green"
   },
   {
     title: "Internship Program",
     description: "Add official work experience to LinkedIn + CV that employers value",
     icon: Award,
-    highlight: true
+    highlight: true,
+    color: "kubecraft-terracotta"
   },
   {
     title: "Weekly Coaching Calls",
     description: "Get direct help from experts who've already walked the path",
     icon: Calendar,
-    highlight: false
+    highlight: false,
+    color: "kubecraft-green"
   },
   {
     title: "Expert Community",
     description: "600+ engineers from Google, Microsoft, IBM ready to help you succeed",
     icon: Users,
-    highlight: true
+    highlight: true,
+    color: "kubecraft-terracotta"
   },
   {
     title: "CV & LinkedIn Accelerator",
     description: "Stand out to top employers with our proven profile optimization",
     icon: MessageSquare,
-    highlight: false
+    highlight: false,
+    color: "kubecraft-green"
   }
 ];
 
@@ -65,7 +71,7 @@ const Features = () => {
             <motion.div 
               key={index} 
               className={`feature-card bg-black rounded-2xl p-8 h-full flex flex-col hover:shadow-xl transition-all duration-300 border border-gray-800 ${
-                feature.highlight ? 'border-l-4 border-l-kubecraft-terracotta' : ''
+                feature.highlight ? `border-l-4 border-l-${feature.color}` : ''
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -74,8 +80,8 @@ const Features = () => {
               whileHover={{ y: -5 }}
             >
               <div className="flex items-start gap-4">
-                <div className="bg-kubecraft-terracotta/20 p-3 rounded-lg mt-1">
-                  <feature.icon className="h-6 w-6 text-kubecraft-terracotta" />
+                <div className={`bg-${feature.color}/20 p-3 rounded-lg mt-1`}>
+                  <feature.icon className={`h-6 w-6 text-${feature.color}`} />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-3 text-white">{feature.title}</h3>

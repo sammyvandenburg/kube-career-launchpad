@@ -5,6 +5,7 @@ const TechAnimation = () => {
   const toolCategories = [
     {
       title: "Infrastructure & Cloud",
+      color: "kubecraft-terracotta",
       tools: [
         { name: "Kubernetes", icon: "⚙️" },
         { name: "Azure", icon: "☁️" },
@@ -14,6 +15,7 @@ const TechAnimation = () => {
     },
     {
       title: "Development & Automation",
+      color: "kubecraft-green",
       tools: [
         { name: "Git & GitHub", icon: "📝" },
         { name: "CI/CD (GitHub Actions)", icon: "🔄" },
@@ -23,6 +25,7 @@ const TechAnimation = () => {
     },
     {
       title: "Systems & Productivity",
+      color: "kubecraft-terracotta",
       tools: [
         { name: "Linux & Arch Linux", icon: "🐧" },
         { name: "Obsidian (Note-Taking)", icon: "📝" }
@@ -52,7 +55,7 @@ const TechAnimation = () => {
           {toolCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
-              className="bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-kubecraft-green/30 transition-all duration-300 hover:shadow-lg hover:shadow-kubecraft-green/10"
+              className={`bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-${category.color}/30 transition-all duration-300 hover:shadow-lg hover:shadow-${category.color}/10`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
