@@ -82,7 +82,7 @@ const WhatYouGet = () => {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Annual Plan (Best Value, or unlock via credits)</h3>
               <p className="text-kubecraft-terracotta font-semibold text-lg">$999/year</p>
-              <p className="text-gray-300 text-sm mt-1">Unlocks everything instantly and saves 15% vs monthly</p>
+              <p className="text-gray-300 text-sm mt-1">Annual unlocks everything instantly and saves 15% compared to monthly</p>
             </div>
             
             <div className="space-y-4">

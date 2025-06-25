@@ -51,7 +51,7 @@ const WhyJoinNow = () => {
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Annual unlock gives full access and saves 15% compared to monthly
+                Annual unlocks everything instantly and saves 15% compared to monthly
               </h3>
             </div>
           </motion.div>
