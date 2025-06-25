@@ -28,7 +28,7 @@ const WhyJoinWithGuarantee = () => {
           <img 
             src="/lovable-uploads/91600401-dffe-4ecf-a7d2-dcfb86e82bed.png" 
             alt="100% Satisfaction Guaranteed" 
-            className="w-64 h-64 object-contain transform transition-transform duration-300 hover:scale-110"
+            className="w-64 h-64 object-contain transform transition-transform duration-300 hover:scale-110 bg-black rounded-full p-4"
           />
         </motion.div>
 
