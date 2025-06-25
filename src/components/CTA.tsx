@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -47,11 +46,11 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-black text-white hover:bg-gray-900 hover:text-white text-xl px-10 py-7 rounded-xl shadow-lg group"
+              className="bg-black text-white hover:bg-gray-900 hover:text-white text-xl px-10 py-7 rounded-xl shadow-lg group transition-all duration-300 hover:shadow-2xl hover:scale-105"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Community Today</span>
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
             </Button>
             <p className="mt-6 text-sm opacity-80">
               Limited spots available - Secure your place now!

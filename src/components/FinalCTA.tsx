@@ -67,11 +67,11 @@ const FinalCTA = () => {
             <Button 
               size="lg" 
               variant="default" 
-              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-2xl px-12 py-8 rounded-xl shadow-lg group hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:brightness-110"
               onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
             >
               <span>Join KubeCraft Now</span>
-              <ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
             </Button>
           </motion.div>
         </motion.div>

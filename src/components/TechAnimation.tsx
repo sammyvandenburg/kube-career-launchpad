@@ -52,12 +52,12 @@ const TechAnimation = () => {
           {toolCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
-              className="bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-kubecraft-green/30 transition-all duration-300"
+              className="bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-kubecraft-green/30 transition-all duration-300 hover:shadow-lg hover:shadow-kubecraft-green/10"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5, scale: 1.02 }}
             >
               <h3 className="text-xl font-bold text-white mb-6 text-center">
                 {category.title}
@@ -66,14 +66,20 @@ const TechAnimation = () => {
                 {category.tools.map((tool, toolIndex) => (
                   <motion.div
                     key={toolIndex}
-                    className="flex items-center gap-4 p-3 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-200"
+                    className="flex items-center gap-4 p-3 bg-gray-800/50 rounded-xl hover:bg-gray-800 transition-all duration-200 cursor-pointer"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (toolIndex * 0.05) }}
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.05, x: 5 }}
                   >
-                    <span className="text-2xl">{tool.icon}</span>
+                    <motion.span 
+                      className="text-2xl"
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {tool.icon}
+                    </motion.span>
                     <span className="text-white font-medium">{tool.name}</span>
                   </motion.div>
                 ))}

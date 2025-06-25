@@ -84,11 +84,11 @@ const WhyJoinNow = () => {
         >
           <Button 
             size="lg" 
-            className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-xl px-10 py-7 rounded-xl shadow-lg group"
+            className="bg-kubecraft-terracotta hover:bg-kubecraft-green text-white text-xl px-10 py-7 rounded-xl shadow-lg group transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:brightness-110"
             onClick={() => window.location.href = 'https://www.skool.com/kubecraft'}
           >
             <span>Join Now & Boost Your Career</span>
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110" />
           </Button>
         </motion.div>
       </div>
