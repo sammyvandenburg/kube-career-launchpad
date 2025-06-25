@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const MischaStory = () => {
@@ -48,7 +49,7 @@ const MischaStory = () => {
         >
           <div className="text-center md:text-left">
             <img 
-              src="/lovable-uploads/a08e8342-245a-426e-b160-769369df9644.png" 
+              src="/lovable-uploads/efb4d7e6-fffc-4dba-9f89-148a4bcbfe54.png" 
               alt="Mischa van den Burg - Founder" 
               className="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto md:mx-0 mb-6 object-cover shadow-xl border-4 border-kubecraft-terracotta/20"
             />
