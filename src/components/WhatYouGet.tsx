@@ -30,7 +30,7 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            What You Get Inside (Worth $8000+)
+            What You Get Inside <span className="text-kubecraft-terracotta">(Worth $8000+)</span>
           </h2>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
             Everything you need to get hired in DevOps. No fluff. No overpriced bootcamp.
@@ -54,7 +54,7 @@ const WhatYouGet = () => {
             <div className="space-y-4">
               {monthlyFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-gray-900/50 rounded-xl">
-                  <div className="text-kubecraft-green mt-1">
+                  <div className={`${index % 2 === 0 ? 'text-kubecraft-terracotta' : 'text-kubecraft-green'} mt-1`}>
                     <Check className="h-5 w-5" />
                   </div>
                   <div>

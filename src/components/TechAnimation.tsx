@@ -44,7 +44,7 @@ const TechAnimation = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">
-            Learn the Tools Top DevOps Engineers Use Daily
+            Learn the Tools <span className="text-kubecraft-green">Top DevOps Engineers</span> Use Daily
           </h2>
           <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12">
             Master the complete modern DevOps toolkit with hands-on projects and real-world applications
@@ -62,7 +62,7 @@ const TechAnimation = () => {
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
             >
-              <h3 className="text-xl font-bold text-white mb-6 text-center">
+              <h3 className={`text-xl font-bold text-${category.color} mb-6 text-center`}>
                 {category.title}
               </h3>
               <div className="space-y-4">

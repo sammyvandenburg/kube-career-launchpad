@@ -43,7 +43,7 @@ const Hero = () => {
           >
             {[
               "Build production-ready projects",
-              "Get referred by senior engineers",
+              "Get referred by senior engineers", 
               "Weekly live coaching and feedback",
               "Access 250+ LinkedIn-ready peer profiles"
             ].map((item, i) => (
@@ -54,8 +54,8 @@ const Hero = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 + (i * 0.1) }}
               >
-                <div className="mt-1 bg-kubecraft-green/20 p-1.5 rounded-full">
-                  <Check className="h-4 w-4 text-kubecraft-green" />
+                <div className={`mt-1 ${i % 2 === 0 ? 'bg-kubecraft-terracotta/20' : 'bg-kubecraft-green/20'} p-1.5 rounded-full`}>
+                  <Check className={`h-4 w-4 ${i % 2 === 0 ? 'text-kubecraft-terracotta' : 'text-kubecraft-green'}`} />
                 </div>
                 <p className="text-lg text-white/95 font-medium">
                   {item}
@@ -96,8 +96,8 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-            <div className="bg-kubecraft-terracotta/20 p-2 rounded-full">
-              <span className="text-kubecraft-terracotta text-lg">🏆</span>
+            <div className="bg-kubecraft-green/20 p-2 rounded-full">
+              <span className="text-kubecraft-green text-lg">🏆</span>
             </div>
             <span className="text-sm font-medium text-white">700+ Members | 250+ LinkedIn-ready connections to boost your network</span>
           </motion.div>

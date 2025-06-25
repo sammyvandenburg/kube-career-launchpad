@@ -33,7 +33,7 @@ const WhyJoinNow = () => {
                 <span className="text-2xl">🚀</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                DevOps roles are in high demand at every major tech company
+                <span className="text-kubecraft-terracotta">DevOps roles are in high demand</span> at every major tech company
               </h3>
             </div>
           </motion.div>
@@ -51,7 +51,7 @@ const WhyJoinNow = () => {
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Annual unlocks everything instantly and saves 15% compared to monthly
+                <span className="text-kubecraft-green">Annual unlocks everything instantly</span> and saves 15% compared to monthly
               </h3>
             </div>
           </motion.div>
@@ -69,7 +69,7 @@ const WhyJoinNow = () => {
                 <span className="text-2xl">🤝</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Join 700+ members building their DevOps careers together
+                Join <span className="text-kubecraft-terracotta">700+ members</span> building their DevOps careers together
               </h3>
             </div>
           </motion.div>
