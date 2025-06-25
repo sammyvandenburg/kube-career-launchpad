@@ -1,4 +1,3 @@
-
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -16,20 +15,6 @@ const WhyJoinWithGuarantee = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
             The KubeCraft DevOps Commitment
           </h2>
-        </motion.div>
-
-        <motion.div
-          className="flex justify-center mb-16"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=400" 
-            alt="DevOps Development" 
-            className="w-64 h-64 object-cover transform transition-transform duration-300 hover:scale-110 rounded-full shadow-2xl"
-          />
         </motion.div>
 
         <motion.div 
