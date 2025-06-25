@@ -1,5 +1,5 @@
 
-import { Check, Star, Zap, Users, BookOpen, Code, Target, Terminal, Briefcase } from "lucide-react";
+import { Check, Star, Zap, Users, BookOpen, Code, Target, Terminal, Briefcase, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhatYouGet = () => {
@@ -15,7 +15,8 @@ const WhatYouGet = () => {
     { icon: <Users className="h-5 w-5" />, title: "CV & LinkedIn Blueprint (Stand out, get noticed)", description: "" },
     { icon: <Target className="h-5 w-5" />, title: "Interview & Salary Preparation", description: "" },
     { icon: <BookOpen className="h-5 w-5" />, title: "Personal Branding & Note-Taking System", description: "" },
-    { icon: <Code className="h-5 w-5" />, title: "Workshop Library & Live Recordings", description: "" }
+    { icon: <Code className="h-5 w-5" />, title: "Workshop Library & Live Recordings", description: "" },
+    { icon: <Linkedin className="h-5 w-5" />, title: "250+ LinkedIn Connections from KubeCraft Members", description: "" }
   ];
 
   return (
@@ -29,7 +30,7 @@ const WhatYouGet = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            What You Get Inside (Worth €8000+)
+            What You Get Inside (Worth $8000+)
           </h2>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
             Everything you need to get hired in DevOps. No fluff. No overpriced bootcamp.
@@ -47,6 +48,7 @@ const WhatYouGet = () => {
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Monthly Plan Includes</h3>
+              <p className="text-kubecraft-green font-semibold text-lg">$98/month</p>
             </div>
             
             <div className="space-y-4">
@@ -73,12 +75,14 @@ const WhatYouGet = () => {
           >
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span className="bg-kubecraft-terracotta text-white px-4 py-2 rounded-full text-sm font-bold">
-                Best Value
+                Best Value - Save 15%
               </span>
             </div>
             
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-white mb-2">Annual Plan (Best Value, or unlock via credits)</h3>
+              <p className="text-kubecraft-terracotta font-semibold text-lg">$999/year</p>
+              <p className="text-gray-300 text-sm mt-1">Unlocks everything instantly and saves 15% vs monthly</p>
             </div>
             
             <div className="space-y-4">

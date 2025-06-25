@@ -33,7 +33,7 @@ const WhyJoinNow = () => {
                 <span className="text-2xl">🚀</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                DevOps roles are in demand at every major tech company
+                DevOps roles are in high demand at every major tech company
               </h3>
             </div>
           </motion.div>
@@ -48,10 +48,10 @@ const WhyJoinNow = () => {
           >
             <div className="flex flex-col h-full">
               <div className="mb-6 bg-kubecraft-terracotta/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                <span className="text-2xl">🔓</span>
+                <span className="text-2xl">💰</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Annual unlock gives full access and saves 40% compared to monthly
+                Annual unlock gives full access and saves 15% compared to monthly
               </h3>
             </div>
           </motion.div>
@@ -65,11 +65,11 @@ const WhyJoinNow = () => {
             whileHover={{ y: -5 }}
           >
             <div className="flex flex-col h-full">
-              <div className="mb-6 bg-red-100/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-                <span className="text-2xl">⏳</span>
+              <div className="mb-6 bg-kubecraft-green/20 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+                <span className="text-2xl">🤝</span>
               </div>
               <h3 className="font-bold text-xl mb-4 text-white">
-                Price increases to $999/year when we reach 725 members
+                Join 700+ members building their DevOps careers together
               </h3>
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+
 import { ArrowRight, ChevronDown, Award, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -44,7 +45,7 @@ const Hero = () => {
               "Build production-ready projects",
               "Get referred by senior engineers",
               "Weekly live coaching and feedback",
-              "Access 600+ LinkedIn-ready peer profiles"
+              "Access 250+ LinkedIn-ready peer profiles"
             ].map((item, i) => (
               <motion.div 
                 key={i}
@@ -98,7 +99,7 @@ const Hero = () => {
             <div className="bg-kubecraft-terracotta/20 p-2 rounded-full">
               <span className="text-kubecraft-terracotta text-lg">🏆</span>
             </div>
-            <span className="text-sm font-medium text-white">700+ Members | Top 1% Skool Community | Members at Google, Microsoft, NVIDIA</span>
+            <span className="text-sm font-medium text-white">700+ Members | 250+ LinkedIn-ready connections to boost your network</span>
           </motion.div>
         </div>
       </div>
